@@ -1,0 +1,174 @@
+<!--<p>Ваши маркетологи</p>
+<div class="marketoperss" *ngFor="let marketolog of marketologs">
+	<p>{{marketolog.staffName}}</p>
+	<p>{{marketolog.staffWorkingPlace}}</p>
+	<button (click)="setStaff(marketologs)">Изменить</button>
+	<button (click)="deleteStaff(mmarketologs)">Удалить</button>
+</div>
+
+<p>Ваши бармены</p>
+<div class="barmens" *ngFor="let barmen of barmens">
+	<p>{{barmen.staffName}}</p>
+	<p>{{barmen.staffWorkingPlace}}</p>
+	<button (click)="setStaff(barmen)">Изменить</button>
+	<button (click)="deleteStaff(barmen)">Удалить</button>
+</div>
+<button (click)="goToCreateBarmen()">Создать бармена</button>
+<button (click)="goToCreateMarketopers()">Создать маркетолога</button>
+-->
+
+
+ <div class="forma">
+ <div class="fon">
+  <div class="row">
+ <div class="tab" role="tabpanel">
+
+ <ul class="nav nav-tabs" role="tablist">
+ <li role="presentation" class="active floatedL"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Маркетологи</a></li>
+ <li role="presentation"class="floatedR"> <a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Бармены</a></li>
+ </ul>
+
+ <div class="tab-content tabs">
+
+ <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+ <form class="form-horizontal">
+ 	<div class="center ">
+ <div class="form-group">
+
+
+ <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-2" *ngFor="let marketolog of marketologs" >
+    <div class="form-group">
+
+  <app-modal #modal>
+    <div class="center  app-modal-header">
+      <h2>Удаление</h2>
+    </div>
+    <div class="center  app-modal-body">
+     <h4>Вы хотите удалить этого члена команды?</h4>
+    </div>
+    <div class="app-modal-footer center">
+	<button name="subnit" type="submit" class="pers__btn orange" (click)= "deleteEst(est)">Удалить</button>
+      <button name="subnit" type="submit" class="pers__btn blue" (click)="modal.hide()">Отменить</button>
+      
+    </div>
+  </app-modal>
+  
+  
+ <div class="staff__circle clr22">
+    <div class="staff__del">
+    <h3><a (click)="modal.show()"><i class="fa fa-times" aria-hidden="true"></i></a>  </h3>
+    </div>
+		<div class="row"> 
+      <div class="staff__icon1 ">
+	   <br> 
+          <img  src="https://yt3.ggpht.com/a-/AN66SAy9X09ErAFCO_zk8-rV3g1WA2vTIpMk3O4jXg=s900-mo-c-c0xffffffff-rj-k-no" alt="Avatar" class="avatar">
+      </div>
+	  
+      <div class="staff__icon2 obriv-slova">
+        <br> <br>
+        <h4>{{marketolog.staffName}}</h4>
+
+        <p >{{marketolog.staffWorkingPlace}}</p>
+      </div>
+	  
+      <div class="staff__icon3">
+        <br>
+      </div>
+
+      <div class="staff__icon4">
+      <a (click)="setStaff(marketolog)" class="staff__btn purple"> Редактировать </a>
+        </div>
+</div>
+
+   </div> 
+ </div>
+   
+
+  </div>
+
+
+
+
+ </div>
+
+ 
+<div class="col-md-offset-4 col-lg-offset-4 col-xl-offset-4  col-xs-offset-3 col-sm-offset-3  col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+    <a  (click)="goToCreateMarketolog()" class="btn btn-lg purple">ДОБАВИТЬ</a>
+    </div>
+ 
+  </div>
+ </form>
+ </div>
+  
+ 
+ 
+ <div role="tabpanel" class="tab-pane fade" id="Section2">
+ <form class="form-horizontal">
+ 	<div class="center ">
+ <div class="form-group">
+
+
+ <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-2" *ngFor="let barmen of barmens" >
+    <div class="form-group">
+    <app-modal #modal>
+    <div class="center  app-modal-header">
+      <h2>Удаление</h2>
+    </div>
+    <div class="center  app-modal-body">
+     <h4>Вы хотите удалить этого члена команды?</h4>
+    </div>
+    <div class="app-modal-footer center">
+	<button name="subnit" type="submit" class="pers__btn orange" (click)= "deleteEst(est)">Удалить</button>
+      <button name="subnit" type="submit" class="pers__btn blue" (click)="modal.hide()">Отменить</button>
+      
+    </div>
+  </app-modal>
+ <div class="staff__circle clr22">
+    <div class="staff__del">
+    <h3><a (click)="modal.show()"><i class="fa fa-times" aria-hidden="true"></i></a>  </h3>
+    </div>
+		<div class="row"> 
+      <div class="staff__icon1 ">
+	   <br> 
+          <img  src="https://yt3.ggpht.com/a-/AN66SAy9X09ErAFCO_zk8-rV3g1WA2vTIpMk3O4jXg=s900-mo-c-c0xffffffff-rj-k-no" alt="Avatar" class="avatar">
+      </div>
+	  
+      <div class="staff__icon2">
+        <br><br>
+        <h3>{{barmen.staffName}}</h3>
+        <p >{{barmen.staffWorkingPlace}}</p>
+      </div>
+	  
+      <div class="staff__icon3">
+        <br>
+      </div>
+
+      <div class="staff__icon4">
+      <a (click)="setStaff(barmen)" class="staff__btn purple"> Редактировать </a>
+        </div>
+</div>
+
+   </div> 
+ </div>
+   
+
+  </div>
+
+
+
+
+ </div>
+
+ 
+<div class="col-md-offset-4 col-lg-offset-4 col-xl-offset-4  col-xs-offset-3 col-sm-offset-3  col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+    <a (click)="goToCreateBarmen()" class="btn btn-lg purple">ДОБАВИТЬ</a>
+    </div>
+ 
+  </div>
+ </form>
+ </div>
+ </div>
+</div>
+ </div>
+ </div>
+

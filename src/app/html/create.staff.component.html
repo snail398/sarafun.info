@@ -1,0 +1,123 @@
+<!--	<form action="">
+	<p>E-mail</p>
+	<input type="text" name="email" [(ngModel)]="staffAcc.login" required>
+	<p>Имя</p>
+	<input type="text" name="firstName"  [(ngModel)]="staffAcc.firstName" required>
+	<p>Фамилия</p>
+	<input type="text" name="secondName" [(ngModel)]="staffAcc.secondName" required>
+	<p>Пароль</p>
+	<input type="text" name="pass" [(ngModel)]="staffAcc.password" required>
+	<p>Подтвердите пароль</p>
+	<input type="text" name="confirm" [(ngModel)]="confirm" required>
+	<p>Заведение</p>
+	<select  [ngModel]="selectedEst" (ngModelChange)="onChangeObj($event)" name="estlist">
+	<option  [ngValue]="est" *ngFor="let est of establishments"  >{{est.estName}}</option>
+	</select>
+	<button (click)="createStaff()" *ngIf="!edit;else unset">Создать члена банды</button>
+	 <ng-template #unset>  
+	<button (click)="editStaff()">Редактировать члена банды</button>
+	  </ng-template>   
+	</form>
+	-->
+	
+<div class="forma">
+<div class="fon">
+ <form class="form-horizontal">
+ <div class="row"> 
+
+   <div class="tab" role="tabpanel">
+   <!-- Nav tabs -->
+   <ul class="nav nav-tabs " role="tablist" *ngIf="!edit;else unset1">
+   <li role="presentation" class="active center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">СОЗДАНИЕ ПЕРСОНАЛА</a></li>
+   </ul>
+<ng-template #unset1>  
+	  <ul class="nav nav-tabs " role="tablist" >
+   <li role="presentation" class="active center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">НАСТРОЙКА ПЕРСОНАЛА</a></li>
+   </ul>
+	  </ng-template> 
+ 
+	   <!-- 1 столбец -->	
+						
+						<!-- Аватарка -->	
+						<div class="avatar ">
+						<img class="" src="https://yt3.ggpht.com/a-/AN66SAy9X09ErAFCO_zk8-rV3g1WA2vTIpMk3O4jXg=s900-mo-c-c0xffffffff-rj-k-no" alt="Avatar" class="avatar">
+					
+						</div>
+						
+						<!-- Название -->
+						<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+						<label for="exampleInputEmail1">Имя</label>
+						<input name="imya"type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="staffAcc.firstName" required>
+						<br>
+						</div>
+						
+						<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-2 col-lg-offset-2 col-xl-offset-2   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+				  <label for="exampleInputEmail1">E-mail</label>
+					<input name="email"type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="staffAcc.login" required>
+					
+					<br>
+				  	</div>
+						
+				  
+						
+
+		 
+		 <!-- 2 столбец -->
+				
+						<!-- Подкатегория -->					  
+						<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+						<label for="exampleInputEmail1">Фамилия</label>
+						<input name="podkat"type="text" class="form-control" id="exampleInputEmail1"[(ngModel)]="staffAcc.secondName" required>
+						<br>
+						</div>
+				  
+
+					<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-2 col-lg-offset-2 col-xl-offset-2   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+				  <label for="exampleInputEmail1">Пароль</label>
+					<input name="sait" type="text" class="form-control" id="exampleInputEmail1"  [(ngModel)]="staffAcc.password" required>
+					<br>
+				  </div>
+		
+
+				
+				<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+                  <label for="exampleInputEmail1">Заведения</label>
+                 <div >
+                   <select class="form-control" [ngModel]="selectedEst" (ngModelChange)="onChangeObj($event)" name="estlist">
+                    <option  [ngValue]="est" *ngFor="let est of establishments"  >{{est.estName}}</option>
+                   </select>
+                 </div>
+               </div>
+			   	<div class="clear"></div>
+			
+ <!-- Кнопка-->
+		<div class="center ">
+			<div class="floatedL ">
+		<button name="subnit" type="submit" class="pers__btn blue" routerLink="/admin/est">Отменить</button>
+		 </div>
+				 
+		<div class="floatedR " *ngIf="!edit;else unset">
+		<button name="subnit" type="submit" class="pers__btn orange" (click)="createEst()">Добавить</button>
+		 </div>
+ <ng-template #unset>  
+			<div class="floatedR " >
+		<button name="subnit" type="submit" class="pers__btn orange" (click)="editEst()">Сохранить</button>
+		 </div>
+	  </ng-template> 
+	    </div> 	
+
+		
+
+
+</div>
+
+
+</div>
+	
+</form>
+	
+</div>
+
+	
+
+   </div>

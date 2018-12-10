@@ -1,0 +1,62 @@
+<div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let action of stat" >
+  <div class="stat__circle clr22">
+    <app-modal #modal1>
+    <div class="app-modal-header">
+      Описание
+    </div>
+    <div class="app-modal-body">
+	{{action.description}}
+    </div>
+    <div class="app-modal-footer">
+      <button type="button" class="btn btn-primary" (click)="modal1.hide()">Отмена</button>
+    </div>
+  </app-modal>
+   				<!-- #Блок №1 с иконкой человека 30%/30%-->			
+				 <div class="stat_icon1 ">
+					 <!-- #Иконка человека-->
+					 <h1><i class="fa fa-user-plus" aria-hidden="true"></i></h1>
+					 	
+					  <div class="stat_icon15">
+					 <!-- #Цифра под иконкой-->
+					 <div >
+					 <p class="obriv-slova">{{action.supportReward}}</p>
+					 </div><br>
+						
+						 </div>	
+						
+						 
+					 <!-- #Черный овал с цифрой-->
+						<div class="stat_bcircle">  
+						<h3>{{action.target}}</h3>
+						</div>
+						
+					 </div>	
+					 
+				
+		 
+				<!-- #Блок №2 =Цифра и ПОДРОБНЕЕ 70%/70%-->	  
+				 <div class="stat_icon2 obriv-slova">
+					 <!-- #=Цифра-->
+					 <h4>= {{action.reward}}</h4>
+		  </div> 
+
+					  <!-- #Блок №2.6 =Цифра и ПОДРОБНЕЕ 70%/70%-->	  
+				 <div class="stat_icon26 obriv-slova">
+				<a (click)= "modal1.show()" class="action_btn" data-toggle="modal">Описание акции</a>	
+		
+</div>
+		
+      <div class="stat__icon3">
+        <p>Количество аффилиатов</p>
+        <p>Количество выполненных акций</p>
+        <p>Количество выданных бонусов за выполнение</p>
+        <p>Количество рефералов</p>
+      </div>
+      <div class="stat__icon4">
+        <p>{{action.countRAct}}</p>
+        <p>{{action.countComplitedRAct}}</p>
+        <p>{{action.countMainBonus}}</p>
+        <p>{{action.countMiniBonus}}</p>
+      </div>
+  </div>
+</div>

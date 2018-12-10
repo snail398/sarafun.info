@@ -1,0 +1,34 @@
+
+ <div class="form-group">
+               <label for="exampleInputEmail1">Введите номер телефона клиента</label>
+               <input name="target" class="form-control" [(ngModel)] ="clientPhone" [textMask]="{mask: mask}" required>
+               </div>
+
+<div   class="center">
+               <a name="btn"(click)="startAction()" class="btn btn-lg purple" ><i class="fa fa-download"></i>Начать акцию</a>
+               </div>
+
+
+<div class="my-container">
+    <ng-template #customLoadingTemplate>
+        <div class="custom-class">
+          
+        </div>
+    </ng-template>
+ 
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+    
+</div> 
+
+ <app-modal #modal>
+    <div class="app-modal-header">
+      {{header}}
+    </div>
+    <div class="app-modal-body" [innerHTML]="myHtml">
+     {{message}}
+    </div>
+    <div class="app-modal-footer">
+      <button type="button" class="btn btn-primary" (click)="getLink()">Получить ссылку</button>
+      <button type="button" class="btn btn-primary" (click)= "understand()">Понятно</button>
+    </div>
+  </app-modal>

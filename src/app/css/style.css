@@ -1,64 +1,14 @@
-
-		@import './app/css/bootstrap.css';
-		@import './app/css/menu.css';
-	input, select{
-color:black;
-}
-
 body {
-
+min-width: 350px;
   background-color: #1D0937;
   color: #ffffff;
 }
-.invisible{display:none;}
-
-a {
-color: #ffffff;
-cursor: pointer;
- }
-
-.action__modal-content {
-	margin-top:30%;
-	background: linear-gradient(#2e3a6a,#320b35);
-
-	
-}	
-
-  .floatedL {
-	   font-size:90%;
-	  text-align:center;
-   float:left;
-   margin-left:10%;
-   margin-right:0;
-	width:40%;
-  padding-left:auto;
-  padding-right:auto;
-} 
-  .floatedR {
-	  font-size:90%;
-	   text-align:center;
-   float:right;
-   margin-right:10%;
-   margin-left:0;
-   width:40%;
-     padding-left:auto;
-  padding-right:auto;
-  }
-  
-.floatedR   .floatedL a {
-
-	   text-align:center;
-   float:right;
-   margin-right:0;
-   margin-left:0;
-   width:100%;
-     padding-left:auto;
-  padding-right:auto;
+.nav {
+	min-width:400px;
 }
 
 h2 a {
 color: #ffffff;
-
  }
 
 
@@ -73,11 +23,10 @@ color: #fff;
 a:hover,a:focus{
  outline: none;
  text-decoration: none;
-cursor: pointer;
+
 }
 
 .navbar {
-
 background-color:  #3F306B
 }
 a.spoiler:after {
@@ -87,16 +36,6 @@ a.spoiler:after {
 a.spoiler.collapsed:after {
     content: " [+]";
 }
-
-
-.forma  {
-   padding-top: 6%;
-}
-
-@media(max-width: 1200px) {
-.forma  {padding-top: 2%;}
-}
-
 .nav-tabs {
 	margin-bottom: 15px;
 }
@@ -130,14 +69,7 @@ position: absolute;
       overflow: hidden;
 
 }
-.center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 
-}
-
-   /* кнопка для добавления */
 /* кнопка */
 
   .pers__btn {
@@ -251,21 +183,151 @@ position: absolute;
    background: linear-gradient(to right,#FD9722,#FC296E);
   }
 
-.obriv-slova {
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-  overflow:hidden;
+
+  
+  img {
+
+padding:0;	
+text-align:center;
+max-height:300px;
+min-width:auto;
+max-width:auto;
+
+vertical-align: middle;
+border-radius: 50%;
+margin:5% auto;
 }
 
-.obriv-slova a p h4  {
-overflow:hidden;
+.podimg {
+color:#fff;
+text-align:center;
+	
 }
 
-button:focus {
-outline: none !important
+
+.right {
+	float:right;
+	
 }
 
-.clear {
-	clear: both;
+.fon {
+	position:relative;
+background:  linear-gradient(to bottom, #2e3a6a,#320b35);
+
 }
+
+.item {
+	opacity:1;
+}
+
+/* кнопка */
+
+.btn{
+ position: relative;
+ color:#fff;
+ border-radius:30px;
+ text-transform: capitalize;
+ transform: scale(1.1,1.1);
+ transition:all 0.3s ease-out 0s;
+
+
+
+}
+.btn:hover{
+ transform: scale(1,1);
+ color:#fff;
+}
+.btn i{
+ margin-right:15px;
+ color:#fff;
+}
+.btn:before {
+ content: "";
+ position: absolute;
+ bottom: -8px;
+ left:0px;
+ width:100%;
+ height: 10px;
+ filter: blur(20px);
+ border-radius: 30px;
+ display: inline-block;
+ z-index: -1;
+ transition: all 0.3s ease-out 0s;
+}
+.btn:hover:before{
+ bottom:0;
+ filter: blur(10px);
+}
+
+
+.btn.purple{
+ background: linear-gradient(to right, #FB2575 , #8936D3);
+
+}
+.btn.purple:before{
+ background: linear-gradient(to right,#c04848,#480048);
+}
+@media only screen and (max-width: 1200px){
+ .btn{
+ margin-bottom:15px;
+ }
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+
+  .add__btn:hover{
+   transform: scale(1,1);
+   color:#fff;
+  }
+  .add__btn i{
+   text-align:center;
+   color:#fff;
+  }
+  .add__btn:before {
+   content: "";
+   position: absolute;
+   bottom: -8px;
+   left:0px;
+   width:100%;
+   height: 10px;
+   filter: blur(20px);
+   border-radius: 30px;
+   display: inline-block;
+   z-index: -1;
+   transition: all 0.3s ease-out 0s;
+  }
+  .add__btn:hover:before{
+   bottom:0;
+   filter: blur(10px);
+  }
+    .add__btn.add
+    {margin:0;
+      padding: 3%;
+
+  }
+  .add__btn.purple   {
+   background: linear-gradient(to right, #FB2575 , #8936D3);
+
+  }
+  .add__btn.purple:before{
+   background: linear-gradient(to right,#c04848,#480048);
+  }
+  
+    .add__btn.blue   {
+   background: linear-gradient(to right, #5189DC,#8C53DB );
+
+  }
+  .add__btn.blue:before{
+   background: linear-gradient(to right,#5189DC,#8C53DB );
+  }
+  
+      .add__btn.orange   {
+   background: linear-gradient(to right, #FD9722,#FC296E );
+
+  }
+  .add__btn.orange:before{
+   background: linear-gradient(to right,#FD9722,#FC296E);
+  }

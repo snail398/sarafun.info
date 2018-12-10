@@ -1,0 +1,137 @@
+<!--
+<p>Название</p>
+<input type="text" [(ngModel)]="brand.title" required>
+<p>Подкатегория</p>
+<input type="text" [(ngModel)]="brand.companyType" required>
+<p>Тип компании</p>
+<select [ngModel]="brandCategory" required (ngModelChange)="onChange($event)" name="estlist">
+	<option [value]="i" *ngFor="let i of categories">{{i}}</option>
+</select>
+<p>Описание</p>
+<input type="text" [(ngModel)]="brand.description" required>
+<p>Контактные данные</p>
+<p>Адрес</p>
+<input type="text" [(ngModel)]="brand.adress" required>
+<p>Телефон</p>
+<input type="text" [(ngModel)]="brand.phone" required>
+<p>Сайт</p>
+<input type="text" [(ngModel)]="brand.site" required>
+<button (click)="changeBrandInfo()"> Сохранить изменения</button>
+
+-->
+
+<div class="forma">
+<div class="fon">
+   <div class="tab" role="tabpanel">
+   <!-- Nav tabs -->
+   <ul class="nav nav-tabs " role="tablist" *ngIf="!edit;else unset1">
+   <li role="presentation" class="active center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">НАСТРОЙКА БРЕНДА</a></li>
+   </ul>
+ <div class="row">
+
+ <form class="form-horizontal">
+	   <!-- 1 столбец -->	
+						
+						<!-- Аватарка -->	
+						<div class="avatar ">
+						<img class="" src="https://im0-tub-ru.yandex.net/i?id=5c976180e442947e799183e186c6bfe3-srl&n=13" alt="Avatar" class="avatar">
+					
+						</div>
+						
+						<!-- Название -->
+						<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+						<label for="exampleInputEmail1">Название юридического лица</label>
+						<input name="imya"type="text" maxlength="35" class="form-control" id="exampleInputEmail1" [(ngModel)]="brand.title" required>
+						<br>
+						</div>
+						
+						<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-2 col-lg-offset-2 col-xl-offset-2   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+				  <label for="exampleInputEmail1">Телефон</label>
+					<input name="tel"type="text" class="form-control" id="exampleInputEmail1"[(ngModel)]="brand.phone" required>
+					<br>
+				  	</div>
+						
+				  
+						
+
+		 
+		 <!-- 2 столбец -->
+				
+						<!-- Подкатегория -->					  
+						<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+						<label for="exampleInputEmail1">Подкатегория</label>
+						<input name="podkat"type="text" class="form-control" id="exampleInputEmail1"[(ngModel)]="brand.companyType" required>
+						<br>
+						</div>
+				  
+
+					<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-2 col-lg-offset-2 col-xl-offset-2   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+				  <label for="exampleInputEmail1">Сайт</label>
+					<input name="sait" type="text" class="form-control" id="exampleInputEmail1"  [(ngModel)]="brand.site" required>
+					<br>
+				  </div>
+				
+				  
+					
+				 <div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+					 <label for="exampleInputEmail1">Тип компании</label>
+					<div >
+					 
+						<select [ngModel]="brandCategory" required (ngModelChange)="onChange($event)" name="estlist" class="form-control">
+					<option [value]="i" *ngFor="let i of categories">{{i}}</option>
+					  </select>
+
+					</div>
+					<br>
+				 	</div>
+					
+				 <div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-2 col-lg-offset-2 col-xl-offset-2   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+				  <label for="exampleInputEmail1">Юридический адрес</label>
+					<input name="adr" type="text" maxlength="60" class="form-control"  [(ngModel)]="brand.adress" required>
+					<br>
+				  	</div>
+					
+				<div class="min col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-3 col-lg-3 col-xl-3">
+				  <label for="exampleInputEmail1">ИНН</label>
+					<input name="inn" type="text" class="form-control" [(ngModel)]="brand.inn" required>
+					<br>
+				  	</div>
+				
+				<div class="kpp col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1  col-xs-10 col-sm-10 col-md-3 col-lg-3 col-xl-3">
+				  <label for="exampleInputEmail1">КПП</label>
+					<input name="kpp" type="text" class="form-control" [(ngModel)]="brand.kpp" required>
+					<br>
+				  	</div>				
+					
+				<div class="ogrn col-xs-offset-1 col-sm-offset-1    col-xs-10 col-sm-10 col-md-3 col-lg-3 col-xl-3">
+				  <label for="exampleInputEmail1">ОГРН</label>
+					<input name="ogrn" type="text" class="form-control"  [(ngModel)]="brand.ogrn" required>
+					<br>
+				  	</div>
+					
+				   <!--Описание-->
+				<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+					<label for="exampleInputEmail1">Описание</label>
+					  <textarea name="opisan" maxlength="150" type="text" class="form-control form-control1" id="exampleInputEmail1"type="text" [(ngModel)]="brand.description" required></textarea>
+						<br>
+				</div> 
+				
+    <!-- Кнопка-->
+		<div class="center ">
+			<div class="floatedL ">
+		<button name="subnit" type="submit" class="pers__btn blue" routerLink="/admin/menu" >Отменить</button>
+		 </div>
+	 
+		 <div class="floatedR ">
+		<button name="subnit" type="submit" class="pers__btn orange" (click)="changeBrandInfo()">Сохранить</button>
+		 </div>
+	 </div> 
+	
+
+</form>
+</div>
+</div>
+</div>
+
+
+   </div>

@@ -1,0 +1,291 @@
+body {
+  background-color: #1D0937;
+  color: #ffffff;
+}
+
+h2 a {
+color: #ffffff;
+margin-top:25%;
+ }
+
+a:hover {
+color: #fff;
+}
+
+.navbar {
+background-color:  #3F306B
+}
+a.spoiler:after {
+    content: " [-]";
+}
+
+a.spoiler.collapsed:after {
+    content: " [+]";
+}
+.nav-tabs {
+	margin-bottom: 15px;
+}
+
+.ot
+{
+padding: 0;
+margin: 0;
+  }
+
+.dimmy {
+
+    margin-top: 100%;
+  }
+.element {
+position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      
+      padding-top: 33%;
+      padding-bottom:auto;
+	  padding-top:auto;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      
+	
+text-align:center;
+}
+
+.circle {
+
+
+border-radius: 50%;
+padding-top: 25%;
+position: relative;
+
+margin-top: 5%;
+
+
+  }
+
+  .rectangle {
+    min-width: 100px;
+    min-height:100px;
+  margin: 2%;
+  border-radius: 5%;
+  padding-top: 25%;
+  position: relative;
+  margin-bottom: 10%;
+  margin-top: 10%
+    }
+
+.lag {
+  	content: '3 .col-xs-2';
+}
+.clr1 {
+background: linear-gradient(to right, #8C53DB, #5189DC);
+    }
+.clr11 {
+background: linear-gradient(to left, #8C53DB, #5189DC);
+        }
+
+.clr2 {
+background: linear-gradient(to right, #FD9722, #FC296E);
+    }
+.clr22 {
+background: linear-gradient(to left, #FD9722, #FC296E);
+        }
+
+.clr3 {
+background: linear-gradient(to right, #FB2575, #8936D3);
+    }
+.clr33 {
+background: linear-gradient(to left, #FB2575, #8936D3);
+        }
+
+.clr4 {
+background: linear-gradient(to right, #FC2B6D, #1D0937);
+    }
+.clr44 {
+background: linear-gradient(to left, #FC2B6D, #1D0937);
+        }
+
+.pos   {
+position: relative;
+}
+
+        
+		@media screen and (min-width: 500px) and (max-width: 600px)  {
+		h2 {
+font-size:150%;}
+		}	
+		@media screen and (max-width: 500px)  {
+		h2 {
+font-size:120%;}
+		}
+		@media screen and (min-width: 500px) and (max-width: 700px)  {
+		h2 {
+font-size:150%;}
+
+
+		}		
+@media screen and (max-width: 321px)  {
+		
+
+.circle {
+  min-width: 140px;
+  min-height:140px;
+
+}
+        }		
+@media screen and (min-width: 322px) and (max-width: 400px) {
+		
+
+.circle {
+  min-width: 150px;
+  min-height:150px;
+
+
+}
+        }
+		
+ @media screen and (min-width: 400px) and (max-width: 500px) 
+			
+			{
+.circle {
+ min-width: 150px;
+  min-height:150px;
+
+		
+}
+        
+        }
+		
+ @media screen and (min-width: 500px) and (max-width: 550px) 
+			
+			{
+.circle {
+ min-width: 150px;
+  min-height:160px;
+
+}
+        
+        }	
+		 @media screen and (min-width: 551px) and (max-width: 600px) 
+			
+			{
+.circle {
+ min-width: 150px;
+  min-height:175px;
+
+		
+}
+        
+        }	
+
+ @media screen and (min-width: 600px) and (max-width: 650px) 
+			
+			{
+.circle {
+ min-width: 150px;
+  min-height:190px;
+}
+.element {
+padding-top: 30%;
+}        
+        }		
+@media screen and (min-width: 651px) and (max-width: 700px) 
+			
+			{
+.circle {
+ min-width: 150px;
+  min-height:210px;
+
+}
+        
+        }					
+		
+	@media screen and (min-width: 701px) and (max-width: 740px) 
+			
+			{
+.circle {
+ min-width: 150px;
+  min-height:230px;
+
+}
+        
+        }
+
+	@media screen and (min-width: 741px) and (max-width: 767px) 
+			
+			{
+.circle {
+ min-width: 150px;
+  min-height:240px;
+
+}
+        
+        }	
+		
+        @media screen and (min-width: 768px) and (max-width: 991px)  {
+       	.circle {
+  min-width: 100px;
+  min-height:100px;
+
+border-radius: 50%;
+padding-top: 33%;
+position: relative;
+margin-bottom: 0;
+margin-top: 5%;
+
+	margin-left:8%;
+	margin-right:8%;
+  }
+    .element {
+position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    
+      padding-top: 33%;
+      padding-bottom:auto;
+	  padding-top:auto;
+      padding-left: auto;
+      padding-right: auto;
+      text-align: center;
+	}
+		
+}
+
+        @media screen and (min-width: 992px)  {
+       	.circle {
+  min-width: 100px;
+  min-height:100px;
+
+border-radius: 50%;
+padding-top: 26%;
+position: relative;
+margin-bottom: 0;
+margin-top: 5%;
+
+	margin-left:4%;
+	margin-right:4%;
+  }
+    .element {
+position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    
+      padding-top: 40%;
+      padding-bottom:auto;
+	  padding-top:auto;
+      padding-left: auto;
+      padding-right: auto;
+      text-align: center;
+	}    		
+
+}@media screen and (min-width: 1500px)  {
+h2 {font-size:300%};
+
+}

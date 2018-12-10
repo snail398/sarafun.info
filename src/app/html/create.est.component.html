@@ -1,0 +1,103 @@
+
+<div class="forma">
+<div class="fon">
+ <form class="form-horizontal">
+ <div class="row"> 
+
+   <div class="tab" role="tabpanel" >
+   <!-- Nav tabs -->
+   <ul class="nav nav-tabs " role="tablist" *ngIf="!edit;else unset1">
+   <li role="presentation" class="active center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">СОЗДАНИЕ ЗАВЕДЕНИЯ</a></li>
+   </ul>
+   <ng-template #unset1>  
+	 <ul class="nav nav-tabs " role="tablist" >
+   <li role="presentation" class="active center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">НАСТРОЙКА ЗАВЕДЕНИЯ</a></li>
+   </ul>
+	  </ng-template> 
+ 
+	   <!-- 1 столбец -->	
+						
+						<!-- Аватарка -->	
+						<div class="avatar ">
+						<img class="" src="https://im0-tub-ru.yandex.net/i?id=d02a11b939ba199eb07f6484b8ca8765&n=13&exp=1" alt="Avatar" class="avatar">
+					
+						</div>
+						
+						<!-- Название -->
+						<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+						<label for="exampleInputEmail1">Название</label>
+						<input name="imya"type="text" maxlength="35" class="form-control" id="exampleInputEmail1" [(ngModel)]="est.estName" required>
+						<br>
+						</div>
+						
+						<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-2 col-lg-offset-2 col-xl-offset-2   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+				  <label for="exampleInputEmail1">Телефон</label>
+					<input name="tel"type="text" class="form-control" id="exampleInputEmail1"[(ngModel)]="est.estPhone" required>
+					<br>
+				  	</div>
+						
+				  
+						
+
+		 
+		 <!-- 2 столбец -->
+				
+						<!-- Подкатегория -->					  
+						<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+						<label for="exampleInputEmail1">Cайт</label>
+						<input name="podkat"type="text" class="form-control" id="exampleInputEmail1"[(ngModel)]="est.estSite" required>
+						<br>
+						</div>
+				  
+
+					<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-2 col-lg-offset-2 col-xl-offset-2   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+				  <label for="exampleInputEmail1">E-mail</label>
+					<input name="sait" type="text" class="form-control" id="exampleInputEmail1"  [(ngModel)]="est.estEmail" required>
+					<br>
+				  </div>
+				
+				  
+					
+			<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+						<label for="exampleInputEmail1">Режим работы</label>
+						<input name="podkat"type="text" class="form-control" id="exampleInputEmail1"[(ngModel)]="est.estWorkTime" required>
+						<br>
+						</div>
+					
+					<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-2 col-lg-offset-2 col-xl-offset-2   col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+						<label for="exampleInputEmail1">Адрес</label>
+						<input name="podkat"type="text" maxlength="60" class="form-control" id="exampleInputEmail1"[(ngModel)]="est.factAdress" required>
+						<br>
+						</div>
+					
+			 
+				   <!--Описание-->
+				<div class="col-xs-offset-1 col-sm-offset-1  col-md-offset-1 col-lg-offset-1 col-xl-offset-1   col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+					<label for="exampleInputEmail1">Описание</label>
+					  <textarea name="opisan"type="text" class="form-control form-control1" id="exampleInputEmail1"type="text" [(ngModel)]="est.estDescription" required></textarea>
+						<br>
+				</div> 
+				
+ <!-- Кнопка-->
+		<div class="center ">
+			<div class="floatedL ">
+		<button name="subnit" type="submit" class="pers__btn blue" routerLink="/admin/est">Отменить</button>
+		 </div>
+				 
+		<div class="floatedR " *ngIf="!edit;else unset">
+		<button name="subnit" type="submit" class="pers__btn orange" (click)="createEst()">Добавить</button>
+		 </div>
+ <ng-template #unset>  
+			<div class="floatedR " >
+		<button name="subnit" type="submit" class="pers__btn orange" (click)="editEst()">Сохранить</button>
+		 </div>
+	  </ng-template> 
+	    </div> 	
+
+
+</div>
+
+</div>
+</form>
+</div>
+</div>

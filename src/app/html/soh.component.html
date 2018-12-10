@@ -1,0 +1,63 @@
+<!--<div *ngFor="let soh of sohs" >
+<p>Член вашей команды {{soh.staffAccount}} {{soh.operationDate}} совершил действие: {{soh.operationType}} по акции {{soh.action}} для клиента {{soh.clientAccount}}
+</div>
+<div *ngFor="let soh of sohs" >
+<p>Член вашей команды {{soh.staffAccount}} {{soh.operationDate}} совершил действие: {{soh.operationType}} по акции {{soh.action}} для клиента {{soh.clientAccount}}
+</div>
+-->
+<div class="min">
+<div class="forma">
+<div class="fon">
+
+   <div class="row"> 
+      <form class="form-horizontal">
+   <div class="tab" role="tabpanel">
+   <!-- Nav tabs -->
+   <ul class="nav nav-tabs " role="tablist" *ngIf="!edit;else unset1">
+   <li role="presentation" class="active center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">ИСТОРИЯ</a></li>
+   </ul>
+   <br>
+<table class="table center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+  <thead>
+ 
+    <tr>
+
+      <th class="col-lg-2 center" scope="col">Сотрудник</th>
+      <th class="col-lg-3 center " scope="col">Дата</th>
+      <th class="col-lg-3 center" scope="col">Действие</th>
+	   <th class="col-lg-2 center" scope="col">Акция</th>
+      <th class="col-lg-2 center" scope="col">Клиент</th>
+    </tr>
+	
+  </thead>
+
+</table>
+
+ <div *ngFor="let soh of sohs" >
+<table class="table table-dark center">
+
+  <tbody>
+  
+    <tr>
+  
+      <td class="col-lg-2">{{soh.staffAccount}}</td>
+      <td class="col-lg-3">{{soh.operationDate}}</td>
+      <td class="col-lg-3">{{soh.operationType}}</td>
+	  <td class="col-lg-2">{{soh.action}}</td>
+	  <td class="col-lg-2">{{soh.clientAccount}}</td>
+	 
+    </tr>  
+
+  </tbody>
+  	  
+</table>
+</div>
+</div>
+</form>
+</div>
+
+
+</div>
+</div>
+</div>

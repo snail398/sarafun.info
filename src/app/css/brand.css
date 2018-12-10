@@ -1,0 +1,371 @@
+﻿.avatar {
+padding:0;	
+text-align:center;
+max-height:50%;
+max-width:50%;
+min-height:50%;
+min-width:50%;
+margin-left:25%;
+margin-right:25%;
+margin-top:2%;
+margin-bottom:2%;
+}
+
+.ogrn {
+float: right;
+margin-right:8.33333333%;
+margin-left:0;
+}
+
+.kpp {
+	min-width:25%;
+max-width: 25%;
+margin-left:4.16%;
+margin-right:4.16%;
+margin-top:0;
+text-align:left;
+}
+
+@media (max-width: 991px) {
+.kpp {
+	min-width:83.33333333%;
+max-width: 83.33333333%;
+margin-left:8.33333333%;
+margin-right:8.33333333%;
+margin-top:0;
+text-align:left;
+
+  }
+}
+
+.nav > li > a {
+	display:inline;
+
+}
+
+.nav > li  {
+	padding-top:10px;
+}
+.fon {
+background:  linear-gradient(to bottom, #2e3a6a,#320b35);
+
+	
+}
+
+
+.tab .nav-tabs{
+ border-bottom: none;
+ padding: 1% 0 0 1%;
+ position: relative;
+}
+.tab .nav-tabs li{ margin: 0 30px 0 0; }
+.tab .nav-tabs li a{
+ font-size: 18px;
+ color: #fff;
+ border-radius: 0;
+ text-transform: none;
+ background: transparent;
+ padding:15px 15px;
+ margin-right: 0;
+ border: none;
+ border-bottom: 2px solid transparent;
+ opacity: 0.5;
+ position: relative;
+ transition: all 0.5s ease 0s;
+}
+.tab .nav-tabs li a:hover{ background: transparent; }
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li.active a:focus,
+.tab .nav-tabs li.active a:hover{
+ border: none;
+ background: transparent;
+ opacity: 1;
+ border-bottom: 2px solid #FC2B6D;
+ color: #fff;
+}
+.tab .tab-content1{
+ padding: 0 0 0 0;
+ margin-top: 40px;
+ background: transparent;
+ z-index: 1;
+ position: relative;
+}
+
+.tab .tab-content2{
+ padding: 0 0 0 0;
+ margin-top: 40px;
+ background: transparent;
+ z-index: 1;
+ position: relative;
+}
+
+@media (max-width: 768px) {
+.active {
+	
+	margin-left:auto;
+	margin-right: auto;
+}
+
+.tab .tab-content2 {
+     min-width: 450px;
+     padding: 0 0 0 0;
+     margin-top: 0;
+ width: 100%;
+ }
+ }
+
+.form-bg{ background: #ddd; }
+.form-horizontal .form-group{
+ margin: 0 0 15px 0;
+
+}
+.form-horizontal .form-control{
+ height: 40px;
+ background: rgba(255,255,255,0.2);
+ border: none;
+ border-radius: 20px;
+ box-shadow: none;
+ padding: 0 20px;
+ font-size: 14px;
+
+ color: #fff;
+ transition: all 0.3s ease 0s;
+}
+ .form-horizontal .form-control1{
+  height: 125px;
+  width: 100%;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  border-radius: 20px;
+  box-shadow: none;
+  padding: 0 20px;
+  font-size: 14px;
+
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.form-horizontal .form-control2{
+
+ height: 40px;
+ background: rgba(255,255,255,0.2);
+ border: none;
+ border-radius: 20px;
+ box-shadow: none;
+ padding: 0 0;
+ font-size: 14px;
+
+ color: #fff;
+ transition: all 0.3s ease 0s;
+}
+
+.form-horizontal .form-control:focus{
+ box-shadow: none;
+ outline: 0 none;
+}
+label{
+ padding: 0 0;
+ color: #fff;
+ text-transform: none;
+ margin-bottom: 10px;
+}
+.form-horizontal .main-checkbox{
+ width: 20px;
+ height: 20px;
+ background: #eec111;
+ float: left;
+ margin: 5px 0 0 20px;
+ border: 1px solid #eec111;
+ position: relative;
+}
+.form-horizontal .main-checkbox label{
+ width: 20px;
+ height: 20px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ cursor: pointer;
+}
+.form-horizontal .main-checkbox label:after{
+ content: "";
+ width: 10px;
+ height: 5px;
+ position: absolute;
+ top: 5px;
+ left: 4px;
+ border: 3px solid #fff;
+ border-top: none;
+ border-right: none;
+ background: transparent;
+ opacity: 0;
+ -webkit-transform: rotate(-45deg);
+ transform: rotate(-45deg);
+}
+.form-horizontal .main-checkbox input[type=checkbox]{ visibility: hidden; }
+.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after{ opacity: 1; }
+.form-horizontal .text{
+ float: left;
+ font-size: 14px;
+ color: #fff;
+ margin-left: 7px;
+ line-height: 20px;
+ padding-top: 5px;
+ text-transform: none;
+}
+.form-horizontal .btn{
+ width: 100%;
+ background: linear-gradient(to right, #FB2575 , #8936D3);
+ padding: 10px 20px;
+ border: none;
+ font-size: 14px;
+
+ color: #fff;
+ border-radius: 20px;
+ text-transform: none;
+ margin: 20px 0 30px 0;
+}
+.form-horizontal .btn:focus{
+ background: linear-gradient(to right, #FB2575 , #8936D3);
+ color: #fff;
+ outline: none;
+ box-shadow: none;
+}
+.form-horizontal .forgot-pass{
+ border-top: 1px solid #615f6c;
+ margin: 0;
+ text-align: center;
+}
+.form-horizontal .forgot-pass .btn{
+ width: auto;
+ background: transparent;
+ margin: 30px 0 0 0;
+ color: #615f6c;
+ text-transform: none;
+ transition: all 0.3s ease 0s;
+
+}
+textarea { resize: none; }
+
+.form-horizontal .forgot-pass .btn:hover{ color: #eec111; }
+@media only screen and (max-width: 1200px){
+ .tab{ padding: 2% 2%; }
+}
+/* кнопка */
+
+.btn{
+ position: relative;
+ color:#fff;
+ border-radius:30px;
+ text-transform: capitalize;
+ transform: scale(1.1,1.1);
+ transition:all 0.3s ease-out 0s;
+
+
+
+}
+.btn:hover{
+ transform: scale(1,1);
+ color:#fff;
+}
+.btn i{
+ margin-right:15px;
+ color:#fff;
+}
+.btn:before {
+ content: "";
+ position: absolute;
+ bottom: -8px;
+ left:0px;
+ width:100%;
+ height: 10px;
+ filter: blur(20px);
+ border-radius: 30px;
+ display: inline-block;
+ z-index: -1;
+ transition: all 0.3s ease-out 0s;
+}
+.btn:hover:before{
+ bottom:0;
+ filter: blur(10px);
+}
+
+
+.btn.purple{
+ background: linear-gradient(to right, #FB2575 , #8936D3);
+
+}
+.btn.purple:before{
+ background: linear-gradient(to right,#c04848,#480048);
+}
+@media only screen and (max-width: 1200px){
+ .btn{
+ margin-bottom:15px;
+ }
+}
+/* отступ */
+.pad-10{
+ margin-top: 10px;
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+/* кнопка */
+
+  .pers__btn {
+	  
+   position:relative;
+   max-width:60%;
+   text-align:center;
+   max-height:50px;
+   color:#fff;
+   padding: 2%;
+   border-radius:50px;
+   text-transform: capitalize;
+   transform: scale(1.1,1.1);
+   transition: all 0.3s ease-out 0s;
+   border:0;
+   min-width: 60%;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 30px;
+   margin-bottom: 30px;
+  }
+  .pers__btn h4 {
+	  margin-top:auto;
+	  margin-bottom:auto;
+  }
+
+
+  .pers__btn:hover{
+   transform: scale(1,1);
+   color:#fff;
+  }
+  .pers__btn i{
+   text-align:center;
+   color:#fff;
+  }
+  .pers__btn:before {
+   content: "";
+   position: absolute;
+   bottom: -8px;
+   left:0px;
+   width:100%;
+   height: 10px;
+   filter: blur(20px);
+   border-radius: 30px;
+   display: inline-block;
+   z-index: -1;
+   transition: all 0.3s ease-out 0s;
+  }
+  
+  .pers__btn:hover:before{
+   bottom:0;
+   filter: blur(10px);
+  }

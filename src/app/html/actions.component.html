@@ -1,0 +1,166 @@
+<!--
+<div class="action-item" *ngFor="let action of actions">
+<p>Приз для аффилиата: {{action.reward}}</p>
+<p>Приз для реферала: {{action.supportReward}}</p>
+<p>Нужно привести {{action.target}} человек</p>
+<p>Описание: {{action.description}}</p>
+<button (click)= "setAction(action)" >Редактировать акцию</button> 
+<button (click)= "deleteAction(action)">Удалить акцию</button> 
+<button>Пригласить в акцию</button> 
+ </div>		
+<button  routerLink="/admin/actions/create">Создать акцию</button> 
+
+-->
+
+<!-- Одна акция--><!--
+              <div class="col-xs-10 col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let action of actions">
+				        <div class="circle clr22">
+                  <div class="del">
+                    <h3><a (click)= "deleteAction(action)"><i class="fa fa-times" aria-hidden="true"></i></a>  </h3>
+                      </div>
+                    <div class="icon1">
+                      <h1><i class="fa fa-user-plus" aria-hidden="true"></i></h1>
+                        <div class="bcircle">  <h3>{{action.target}}</h3>  </div>
+						        <p class="ots">{{action.supportReward}}</p>
+
+                    </div>
+                    <div class="icon2">
+                              <h3>= {{action.reward}}</h3>
+                              <br>
+                              <a >ПОДРОБНЕЕ</a>
+                    </div>
+                    <div class="icon3">
+
+                              <p>Этой акцией воспользовались {{action.peopleUsed}} человек</p>
+                    </div>
+                    <div class="icon4"><a (click)= "setAction(action)">ИЗМЕНИТЬ</a></div>
+                    <div class="icon5"><a >ДОБАВИТЬ УЧАСТНИКА</a></div>
+				<div class="icon6"><p>Дней до старта: 6 <span class="fa fa-circle" aria-hidden="true"></span> </p> </div>
+
+                </div>
+              </div>
+			  
+			  
+
+			  <button  routerLink="/admin/actions/create">Создать акцию</button> 
+			   -->
+<body>			  
+  <div class="row"> 
+    <form class="form-horizontal">
+  <!-- #Адаптивный блок (где row)-->			  
+  <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let action of actions">
+	 <!-- #Все акции одного цвета-->	
+  
+  <app-modal #modal>
+    <div class="center  app-modal-header">
+      <h2>Удаление</h2> 
+    </div>
+    <div class="center  app-modal-body">
+     <h4>Вы хотите удалить эту акцию?</h4>
+    </div>
+    <div class="app-modal-footer center">
+	<button name="subnit" type="submit" class="pers__btn orange" (click)= "deleteAction(action)">Удалить</button>
+      <button name="subnit" type="submit" class="pers__btn blue" (click)="modal.hide()">Отменить</button>
+      
+    </div>
+  </app-modal>
+  
+    <app-modal #modal1>
+    <div class="app-modal-header">
+      Описание
+    </div>
+    <div class="app-modal-body">
+	{{action.description}}
+    </div>
+    <div class="app-modal-footer">
+      <button type="button" class="btn btn-primary" (click)="modal1.hide()">Отмена</button>
+    </div>
+  </app-modal>
+	 <div class="action__circle clr22">
+	 
+				<!-- #Крестик удалить-->
+				 <div class="action__del">
+					 <h3><a (click)= "modal.show()"><i class="fa fa-times" aria-hidden="true"></i></a>  </h3>
+				 </div>
+		 
+				<!-- #Блок №1 с иконкой человека 30%/30%-->			
+				 <div class="action__icon1 ">
+					 <!-- #Иконка человека-->
+					 <h1><i class="fa fa-user-plus" aria-hidden="true"></i></h1>
+					 	
+					  <div class="action__icon15">
+					 <!-- #Цифра под иконкой-->
+					 <div >
+					 <p class="obriv-slova">{{action.supportReward}}</p>
+					 </div><br>
+						
+						 </div>	
+						
+						 
+					 <!-- #Черный овал с цифрой-->
+						<div class="action__bcircle">  
+						<h3>{{action.target}}</h3>
+						</div>
+						
+					 </div>	
+					 
+				
+		 
+				<!-- #Блок №2 =Цифра и ПОДРОБНЕЕ 70%/70%-->	  
+				 <div class="action__icon2 obriv-slova">
+					 <!-- #=Цифра-->
+					 <h4>= {{action.reward}}</h4>
+		  </div> 
+
+					  <!-- #Блок №2.6 =Цифра и ПОДРОБНЕЕ 70%/70%-->	  
+				 <div class="action__icon26 obriv-slova">
+				<a (click)= "modal1.show()" class="action_btn" data-toggle="modal">Описание акции</a>	
+		
+</div>
+		
+		
+		
+		 
+		<!-- #Блок №3 -->	 	
+		 <div class="action__icon3">
+		 <p>Этой акцией воспользовались {{action.peopleUsed}} человек</p>
+		 </div>
+		 
+		<!-- #Блок №4 -->	  
+		 <div class="action__icon4"><a (click)= "setAction(action)">ИЗМЕНИТЬ</a></div>
+		<!-- #Блок №5 -->	  
+		 <div class="action__icon5" *ngIf="action.between > 0"><a (click)= "startAction(action)">ДОБАВИТЬ УЧАСТНИКА</a></div>
+			<!-- #Блок №6 -->	  
+		 <div class="action__icon6"><p>Дней до конца акции: {{action.between}} <span class="fa fa-circle" aria-hidden="true"></span> </p> </div>
+		
+	 </div>
+	  
+
+ </div>
+   	<div class="clear"></div>
+ 	 <!-- Кнопка-->
+	<div class="center">
+ 	
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <a routerLink="/admin/actions/create" class="btn btn-lg purple">ДОБАВИТЬ</a>
+   
+    </div>
+	</div> 
+	</form>
+ 
+ </div>
+
+</body>
+
+
+
+ 
+<script>
+$(document).ready(function(){
+  //при нажатию на любую кнопку, имеющую класс .btn
+  $(".btn").click(function() {
+    //открыть модальное окно с id="myModal"
+    $("#myModal").modal('show');
+  });
+});
+</script>

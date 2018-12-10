@@ -1,0 +1,92 @@
+<!--
+<div *ngFor="let est of establishments" >
+<p>{{est.estName}}</p>
+<button (click)="setEst(est)">Изменить</button>
+<button (click)="deleteEst(est)">Удалить</button>
+</div>
+<button routerLink="/admin/est/create">Создать заведение</button>
+-->
+  <!-- Конец меню-->
+
+<div class="forma">
+<div class="fon">
+   <div class="row"> 
+   <form class="form-horizontal">
+   <div class="tab" role="tabpanel">
+   <!-- Nav tabs -->
+   <ul class="nav nav-tabs " role="tablist" *ngIf="!edit;else unset1">
+   <li role="presentation" class="active center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">ЗАВЕДЕНИЯ</a></li>
+   </ul>
+  
+ 
+  
+  <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let est of establishments" >
+    <app-modal #modal>
+    <div class="center  app-modal-header">
+      <h2>Удаление</h2>
+    </div>
+    <div class="center  app-modal-body">
+     <h3>Вы хотите удалить это заведение?</h3>
+    </div>
+    <div class="app-modal-footer center">
+	<button name="subnit" type="submit" class="pers__btn orange" (click)= "deleteEst(est)">Удалить</button>
+      <button name="subnit" type="submit" class="pers__btn blue" (click)="modal.hide()">Отменить</button>
+      
+    </div>
+  </app-modal>
+ 
+  <div class="zav__circle clr22">
+    <div class="zav__del">
+    <h3><a (click)="modal.show()"><i class="fa fa-times" aria-hidden="true"></i></a>  </h3>
+    </div>
+	<div class="row"> 
+      <div class="zav__icon1 ">
+          <img  src="https://im0-tub-ru.yandex.net/i?id=d02a11b939ba199eb07f6484b8ca8765&n=13&exp=1" alt="Avatar" class="avatar">
+      </div>
+	  
+     <div class="zav__icon2 obriv-slova">
+        <br>
+        <h4 class="obriv-slova">{{est.estName}}</h4>
+        
+      </div>
+	  
+	  <div class="zav__icon25">
+
+        <p href="#">{{est.estPhone}}</p>
+      </div>
+	  
+      <div class="zav__icon3 obriv-slova">
+        <p>Адрес: </p>
+		<p>{{est.factAdress}}</p>
+	  </div>	 
+	  <div class="zav__icon35 obriv-slova">
+        <p>Режим работы:</p>
+		<p>{{est.estWorkTime}}</p>
+    
+      </div>
+
+     <div class="zav__icon4">
+      <a (click)="setEst(est)" class="zav__btn purple">Редактировать</a>
+       </div>
+
+  </div>
+    </div>
+  
+  </div>
+
+  	<div class="clear"></div>
+ 	 <!-- Кнопка-->
+	<div class="center">
+ 	
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <a routerLink="/admin/est/create" class="btn btn-lg purple">ДОБАВИТЬ</a>
+   
+    </div>
+	</div>
+
+</div>
+</form>
+</div>
+
+</div>
+</div>
