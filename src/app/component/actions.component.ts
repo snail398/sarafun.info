@@ -8,6 +8,8 @@ import {Router} from '@angular/router';
 import { ModalComponent} from '../component/modal.component';
 import { DomSanitizer, SafeResourceUrl, SafeUrl,SafeHtml} from '@angular/platform-browser';
 import * as qrcode from '../js/qrcode';
+
+//comment
 @Component({   
   selector: 'app-content',
   templateUrl:'../html/actions.component.html',
