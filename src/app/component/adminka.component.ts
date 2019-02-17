@@ -4,6 +4,8 @@ import {Router} from '@angular/router';
 import { HttpService} from '../service/http.service';
 import {HttpClient, HttpParams, HttpHeaders} from '@angular/common/http';
 
+
+//FIRST SASHA DEV
 @Component({
   selector: 'app-adminka',
   template: `
