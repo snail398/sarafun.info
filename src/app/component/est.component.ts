@@ -26,7 +26,11 @@ export class EstComponent implements OnInit{
 											  new HttpParams().set('accountid',this.accountModel.getAccount().id.toString()))
 											  .subscribe(data => 
 											  {for (var i = 0; data.length > i; i++) 
-											  { this.establishments.push(data[i])}}
+											  { this.establishments.push(data[i]);
+											
+												}
+												}
+												
 											  );
     }
 	setEst(est:Establishment){

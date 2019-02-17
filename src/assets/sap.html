@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=0.85; maximum-scale=0.85; user-scalable=1;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Введите номер телефона</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="./css/jquery.loadingModal.css">
+	<link rel="stylesheet" href="./css/sap.css">
+	<script src="./js/jquery.maskedinput.js"></script>
+	<script src="./js/qrious.js"></script>
+	<script src="./js/jquery.loadingModal.js"></script>
+<link rel="icon" type="image/x-icon" href="sarafanka.ico">
+<style type="text/css">
+	#success{
+	display:none;
+	}
+	#failed{
+	display:none;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="input" class="welcome center">
+	
+		<p class="hallo">Привет, друг!</p>
+		<p class="uslov">Для участия в акции введи свой номер телефона и жми кнопку </p>
+		<div class="center">
+			<input  name="reward" maxlength="40" type="text" class="form-control " id="phone">
+			<br>
+			<button class="btn purple"name="submit" type="submit" id="run-button" ><p>Запустить акцию</p></button>
+		</div>
+	</div>
+	
+<div id="success" class="hallo">
+	<p>Акция успешно запущена</p>
+	<p>Ссылка на твой личный кабинет отправлена тебе в WhatsApp</p>
+</div>
+<div id="failed" class="hallo">
+	<p>Не удалось запустить акцию</p>
+</div>
+
+	<script>
+
+	
+	var parseQueryString = function (strQuery) {
+    var strSearch   = strQuery.substr(1),
+        strPattern  = /([^=]+)=([^&]+)&?/ig,
+        arrMatch    = strPattern.exec(strSearch),
+        objRes      = {};
+    while (arrMatch != null) {
+        objRes[arrMatch[1]] = arrMatch[2];
+        arrMatch = strPattern.exec(strSearch);
+    }
+    return objRes;
+};
+	
+ $(window).load(function() {
+	$("#phone").mask("+7(999) 999-9999");
+}); 
+
+$('#run-button').on('click', function(e){
+	document.getElementById("input").style.display='none';
+	$('body').loadingModal({
+	  text: 'Loading...'
+	});
+	var phone = $("#phone").val();
+	phone = phone.replace(/\D/gi,"");
+	
+	var account = JSON.stringify({ 
+		login: "Ваш E-mail",
+		phoneNumber: phone,
+		password:"Ваш e-mail",
+		firstName: "Ваше имя",
+		secondName: "Ваша фамилия",
+		accountType: "user",
+		pathToAvatar: "noavatar"
+	});
+	 var queryStr = parseQueryString(window.location.search),
+		action = queryStr['action'],
+		staffid = queryStr['staffid'];
+		
+	var request = new XMLHttpRequest();
+	request.open("POST", "http://sarafun.info:4200/runningactions/newract?action="+action+"&messagetype=whatsapp&staffid="+staffid,true);
+	request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+	request.send(account);	
+
+	request.onreadystatechange = function() {
+	
+		  if (request.readyState != 4) return;
+		  // hide the loading modal
+		$('body').loadingModal('hide');
+
+		// destroy the plugin
+		$('body').loadingModal('destroy');
+		  if (request.status != 200) {
+			document.getElementById("failed").style.display='block';
+		  } else {
+			document.getElementById("success").style.display='block';
+		  }
+		}
+});
+
+</script>
+</body>
+</html>

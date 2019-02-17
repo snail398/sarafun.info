@@ -62,9 +62,12 @@ padding-top: 25%;
 position: relative;
 
 margin-top: 5%;
-
-
-  }
+}
+.item {
+	text-align:center;
+	float:left;
+}
+  
 
   .rectangle {
     min-width: 100px;
@@ -77,9 +80,8 @@ margin-top: 5%;
   margin-top: 10%
     }
 
-.lag {
-  	content: '3 .col-xs-2';
-}
+
+
 .clr1 {
 background: linear-gradient(to right, #8C53DB, #5189DC);
     }
@@ -124,37 +126,45 @@ font-size:120%;}
 		@media screen and (min-width: 500px) and (max-width: 700px)  {
 		h2 {
 font-size:150%;}
+		}	
 
 
-		}		
+
 @media screen and (max-width: 321px)  {
 		
 
 .circle {
-  min-width: 140px;
-  min-height:140px;
+  min-width: 120px;
+  max-width: 120px;
+  min-height:120px;
+  margin-left:auto;
+  margin-right:auto;
 
 }
         }		
-@media screen and (min-width: 322px) and (max-width: 400px) {
+@media screen and (min-width: 322px) and (max-width: 359px) {
 		
 
 .circle {
   min-width: 150px;
+  max-width: 150px;
   min-height:150px;
+  margin-left:auto;
+  margin-right:auto;
 
 
 }
         }
 		
- @media screen and (min-width: 400px) and (max-width: 500px) 
+ @media screen and (min-width: 360px) and (max-width: 500px) 
 			
 			{
 .circle {
- min-width: 150px;
+  min-width: 150px;
+  max-width: 150px;
   min-height:150px;
-
-		
+  margin-left:auto;
+  margin-right:auto;	
 }
         
         }
@@ -163,9 +173,11 @@ font-size:150%;}
 			
 			{
 .circle {
- min-width: 150px;
+ min-width: 160px;
+   max-width: 160px;
   min-height:160px;
-
+  margin-left:auto;
+  margin-right:auto;	
 }
         
         }	
@@ -173,9 +185,11 @@ font-size:150%;}
 			
 			{
 .circle {
- min-width: 150px;
+ min-width: 175px;
+   max-width: 175px;
   min-height:175px;
-
+  margin-left:auto;
+  margin-right:auto;	
 		
 }
         
@@ -185,8 +199,11 @@ font-size:150%;}
 			
 			{
 .circle {
- min-width: 150px;
+ min-width: 190px;
+  max-width: 190px;
   min-height:190px;
+    margin-left:auto;
+  margin-right:auto;	
 }
 .element {
 padding-top: 30%;
@@ -196,8 +213,11 @@ padding-top: 30%;
 			
 			{
 .circle {
- min-width: 150px;
+ min-width: 210px;
+  max-width: 210px;
   min-height:210px;
+    margin-left:auto;
+  margin-right:auto;	
 
 }
         
@@ -207,8 +227,10 @@ padding-top: 30%;
 			
 			{
 .circle {
- min-width: 150px;
+  max-width: 230px;
   min-height:230px;
+    margin-left:auto;
+  margin-right:auto;	
 
 }
         
@@ -218,8 +240,11 @@ padding-top: 30%;
 			
 			{
 .circle {
- min-width: 150px;
+ min-width: 240px;
+  max-width: 240px;
   min-height:240px;
+    margin-left:auto;
+  margin-right:auto;	
 
 }
         
@@ -227,17 +252,16 @@ padding-top: 30%;
 		
         @media screen and (min-width: 768px) and (max-width: 991px)  {
        	.circle {
-  min-width: 100px;
-  min-height:100px;
-
+min-width: 80%;
+max-width: 80%;
+min-height:10px;
 border-radius: 50%;
-padding-top: 33%;
+padding-top: 80%;
 position: relative;
 margin-bottom: 0;
-margin-top: 5%;
-
-	margin-left:8%;
-	margin-right:8%;
+margin-top: 15%;
+  margin-left:auto;
+  margin-right:auto;	
   }
     .element {
 position: absolute;
@@ -245,47 +269,44 @@ position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-    
+      padding-top: 35%;
+      padding-bottom:auto;
+	  padding-top:auto;
+      padding-left: auto;
+      padding-right: auto;
+      text-align: center;
+	}   
+}
+
+        @media screen and (min-width: 992px)   {
+       	.circle {
+min-width: 80%;
+max-width: 80%;
+min-height:10px;
+border-radius: 50%;
+padding-top: 80%;
+position: relative;
+margin-bottom: 0;
+margin-top: 15%;
+  margin-left:auto;
+  margin-right:auto;	
+  }
+    .element {
+position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       padding-top: 33%;
       padding-bottom:auto;
 	  padding-top:auto;
       padding-left: auto;
       padding-right: auto;
       text-align: center;
-	}
-		
-}
-
-        @media screen and (min-width: 992px)  {
-       	.circle {
-  min-width: 100px;
-  min-height:100px;
-
-border-radius: 50%;
-padding-top: 26%;
-position: relative;
-margin-bottom: 0;
-margin-top: 5%;
-
-	margin-left:4%;
-	margin-right:4%;
-  }
-    .element {
-position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    
-      padding-top: 40%;
-      padding-bottom:auto;
-	  padding-top:auto;
-      padding-left: auto;
-      padding-right: auto;
-      text-align: center;
 	}    		
-
-}@media screen and (min-width: 1500px)  {
-h2 {font-size:300%};
+h2 {font-size:200%};
+}
+@media screen and (min-width: 1500px)  {
+h2 {font-size:200%};
 
 }

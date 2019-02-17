@@ -1,13 +1,20 @@
 
 		@import './app/css/bootstrap.css';
 		@import './app/css/menu.css';
+		@import url("https://netdna.bootstrapcdn.com/font-awesome/.6.1/css/font-awesome.min.css");
 	input, select{
 color:black;
 }
-
+#qr-cont img {
+    max-width: 100%;
+    height: auto;
+}
 body {
-
-  background-color: #1D0937;
+background:url(assets/img/plashka.png);
+background-size:70%;
+background-repeat:no-repeat;
+background-position:-80px -80px;
+ background-color:#1D0937;
   color: #ffffff;
 }
 .invisible{display:none;}
@@ -74,6 +81,10 @@ a:hover,a:focus{
  outline: none;
  text-decoration: none;
 cursor: pointer;
+}
+
+.bold {
+	font-weight: bold;
 }
 
 .navbar {
@@ -164,6 +175,30 @@ position: absolute;
 	  margin-top:auto;
 	  margin-bottom:auto;
   }
+  
+  @media only screen and (max-width: 600px){
+	 .pers__btn {
+   float:none;
+   position:relative;
+   max-width:80%;
+   text-align:center;
+   max-height:50px;
+   color:#fff;
+   padding: 2%;
+   border-radius:50px;
+   text-transform: capitalize;
+   transform: scale(1.1,1.1);
+   transition: all 0.3s ease-out 0s;
+   border:0;
+   min-width: 80%;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 5px;
+   margin-bottom: 30px;
+  }
+}
+
   .floatedL {
 	   font-size:90%;
 	  text-align:center;
@@ -268,4 +303,14 @@ outline: none !important
 
 .clear {
 	clear: both;
+}
+.anticont {
+	margin-left:-160px;
+}
+.underlinе {
+text-decoration: underline;
+}
+
+option {
+	color: #000;
 }

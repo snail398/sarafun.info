@@ -47,7 +47,8 @@
 <body>			  
   <div class="row"> 
     <form class="form-horizontal">
-  <!-- #Адаптивный блок (где row)-->			  
+  <!-- #Адаптивный блок (где row)-->		
+  
   <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let action of actions">
 	 <!-- #Все акции одного цвета-->	
   
@@ -57,6 +58,7 @@
     </div>
     <div class="center  app-modal-body">
      <h4>Вы хотите удалить эту акцию?</h4>
+	 <p>Все запущенные акции и купоны ваших клиентов тоже будут удалены </p>
     </div>
     <div class="app-modal-footer center">
 	<button name="subnit" type="submit" class="pers__btn orange" (click)= "deleteAction(action)">Удалить</button>
@@ -76,6 +78,19 @@
       <button type="button" class="btn btn-primary" (click)="modal1.hide()">Отмена</button>
     </div>
   </app-modal>
+  
+      <app-modal #modalqr>
+    <div class="app-modal-header">
+      Отсканируйте QR-код
+    </div>
+    <div class="app-modal-body" [innerHTML]="getQR(action)">
+	
+    </div>
+    <div class="app-modal-footer">
+      <button type="button" class="btn btn-primary" (click)="modalqr.hide()">Отмена</button>
+    </div>
+  </app-modal>
+  <div class="action__ogran">
 	 <div class="action__circle clr22">
 	 
 				<!-- #Крестик удалить-->
@@ -113,9 +128,19 @@
 		  </div> 
 
 					  <!-- #Блок №2.6 =Цифра и ПОДРОБНЕЕ 70%/70%-->	  
-				 <div class="action__icon26 obriv-slova">
+				 <div class="action__icon26 obriv-slova underlinе">
 				<a (click)= "modal1.show()" class="action_btn" data-toggle="modal">Описание акции</a>	
-		
+				
+		 
+</div>
+	 <div class="action__icon26 obriv-slova underlinе">
+				
+				<a *ngIf="action.between > 0"(click)= "showQR(action)" class="action_btn" data-toggle="modal">Показать QR-код</a>	
+		 
+</div>
+
+ <div class="action__icon26 obriv-slova underlinе" *ngIf="action.between > 0" [innerHTML]="getAds(action)">
+	 
 </div>
 		
 		
@@ -127,25 +152,25 @@
 		 </div>
 		 
 		<!-- #Блок №4 -->	  
-		 <div class="action__icon4"><a (click)= "setAction(action)">ИЗМЕНИТЬ</a></div>
+		 <div class="action__icon4 underlinе"><a (click)= "setAction(action)">ИЗМЕНИТЬ</a></div>
 		<!-- #Блок №5 -->	  
-		 <div class="action__icon5" *ngIf="action.between > 0"><a (click)= "startAction(action)">ДОБАВИТЬ УЧАСТНИКА</a></div>
-			<!-- #Блок №6 -->	  
+		 <div class="action__icon5 underlinе" *ngIf="action.between > 0"><a (click)= "startAction(action)">ДОБАВИТЬ УЧАСТНИКА</a></div>
+		 	<div class="clear"></div>
+			
+	 </div>
+	 <!-- #Блок №6 -->	  
 		 <div class="action__icon6"><p>Дней до конца акции: {{action.between}} <span class="fa fa-circle" aria-hidden="true"></span> </p> </div>
 		
-	 </div>
-	  
+	  </div> 
 
  </div>
    	<div class="clear"></div>
  	 <!-- Кнопка-->
-	<div class="center">
- 	
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-    <a routerLink="/admin/actions/create" class="btn btn-lg purple">ДОБАВИТЬ</a>
-   
-    </div>
+
+	<div class="col-md-offset-4 col-lg-offset-4 col-xl-offset-4  col-xs-offset-3 col-sm-offset-3  col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+    <a routerLink="/admin/actions/create" class=" btn btn-lg purple">ДОБАВИТЬ</a>
 	</div> 
+		
 	</form>
  
  </div>

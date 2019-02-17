@@ -259,4 +259,14 @@ float:left;
    margin-bottom:15px;
    }
   }
-
+  
+.anticont {
+margin-left:auto;
+margin-right:auto;	
+}
+ @media only screen and (min-width: 800px){
+.anticont {
+	
+padding-right:160px;
+}
+ }

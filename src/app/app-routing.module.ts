@@ -11,6 +11,7 @@ import { EditEstComponent } from './component/edit.est.component';
 import { CreateStaffComponent } from './component/create.staff.component';
 import { EditStaffComponent } from './component/edit.staff.component';
 import { MenuComponent } from './component/menu.component';
+import { QrComponent } from './component/qr.component';
 import { LoginComponent } from './component/login.component';
 import { StatComponent } from './component/stat.component';
 import { BrandComponent } from './component/brand.component';
@@ -20,6 +21,8 @@ import { StaffComponent } from './component/staff.component';
 import { RunActionComponent } from './component/run.action.component';
 import { EnterCodeComponent } from './component/enter.code.component';
 import { SOHComponent } from './component/soh.component';
+import { ReferalComponent } from './component/referal.component';
+import { UserHomeComponent } from './component/user.home.component';
 
 
 const adminRoutes: Routes = [
@@ -39,12 +42,16 @@ const adminRoutes: Routes = [
     { path: 'staff', component: StaffComponent},
     { path: 'actions/run', component: RunActionComponent},
     { path: 'actions/enter', component: EnterCodeComponent},
-    { path: 'soh', component: SOHComponent}
+    { path: 'soh', component: SOHComponent},
+    { path: 'userhome', component: UserHomeComponent},
+    { path: 'actions/qr', component: QrComponent}
 ];
 
 const routes: Routes = [
+
     { path: '', component: LandingComponent},
-    { path: 'admin', component: AdminkaComponent, children: adminRoutes}
+    { path: 'admin', component: AdminkaComponent, children: adminRoutes},
+    { path: 'referal', component: ReferalComponent}
 ];
 
 @NgModule({

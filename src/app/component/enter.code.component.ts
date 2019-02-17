@@ -7,11 +7,11 @@ import { AccountModel } from '../account.model';
 import { ActionService} from '../service/action.service';
 import {Router} from '@angular/router';
 import { ModalComponent} from '../component/modal.component';
-import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl, SafeUrl,SafeHtml} from '@angular/platform-browser';
  
 @Component({  
   selector: 'app-content',
-  templateUrl:'../html/enter.code.component.html',
+  templateUrl:'../html/enter.code.component.html', 
   styleUrls: ['../css/app.component.css','../css/edit.css'], 
   providers: [HttpService]
 })
@@ -20,12 +20,21 @@ export class EnterCodeComponent implements OnInit{
     private modalComp: ModalComponent;
     action:number=0;
 	account:number=0;
+    referalNum:number=0;
+	
+	noll:number=0;
+    referal:string="";
 	sarCode:string="";
-	public mask = [/[C,S]/, /[0-9]/, /\d/, /\d/, /\d/, /\d/, /\d/,  /\d/, /\d/, /\d/];
+	public mask = [/[C,S,R]/, /[0-9]/, /\d/, /\d/, /\d/, /\d/, /\d/,  /\d/, /\d/, /\d/, /\d/, /\d/];
 	 public loading = false;
 	 message:string="";
 	 header:string="";
-	 myHtml:string="";
+	 response:string="";
+	 response1:string="";
+	 myHtml:SafeHtml="";
+	 codeLength:number=12;
+	 accLength:number=5;
+	 ractLength:number=6;
 	 
  constructor(private httpService: HttpService,
 			 private accountModel:AccountModel,
@@ -52,17 +61,45 @@ export class EnterCodeComponent implements OnInit{
 	.subscribe(
 		data=>
 		{
+			this.response = data.toString();
 			this.header = "Выдайте бонус и не забудьте отправить сообщение аффилиату";
 			var re =/\|/gi;
 			var se = /iPhone/gi;
 			if ((window.navigator.userAgent).search(se) !=-1)
 			{
-				this.myHtml = this.sanitizer.bypassSecurityTrustHtml("<p>Выдайте бонус рефералу! Его подарок - "+data.substr(data.search(re)+1)+"</p></br><p>Аффилиат завершил акцию! Кликните на ссылку, для отправки сообщения с ссылкой на сарафанку</p></br>"+"<a href=\"sms:+"+data.substr(0,11)+"&body="+data.substr(11,data.search(re)-11)+"\">"+data.substr(11,data.search(re)-11)+"</a>");
-
+				this.myHtml = this.sanitizer.bypassSecurityTrustHtml("<p>Выдайте бонус рефералу! Его подарок - "+this.response.substr(this.response.search(re)+1)+"</p></br><p>Аффилиат завершил акцию! Кликните на ссылку, для отправки сообщения с ссылкой на сарафанку</p></br>"+"<a href=\"sms:+"+this.response.substr(0,11)+"&body="+this.response.substr(11,this.response.search(re)-11)+"\">"+this.response.substr(11,this.response.search(re)-11)+"</a>");
+ 
 			}
 			else
 			{
-			this.myHtml = this.sanitizer.bypassSecurityTrustHtml("<p>Выдайте бонус рефералу! Его подарок - "+data.substr(data.search(re)+1)+"</p></br><p>Аффилиат завершил акцию! Кликните на ссылку, для отправки сообщения с ссылкой на сарафанку</p></br>"+"<a href=\"sms:+"+data.substr(0,11)+"?body="+data.substr(11,data.search(re)-11)+"\">"+data.substr(11,data.search(re)-11)+"</a>");
+			this.myHtml = this.sanitizer.bypassSecurityTrustHtml("<p>Выдайте бонус рефералу! Его подарок - "+this.response.substr(this.response.search(re)+1)+"</p></br><p>Аффилиат завершил акцию! Кликните на ссылку, для отправки сообщения с ссылкой на сарафанку</p></br>"+"<a href=\"sms:+"+this.response.substr(0,11)+"?body="+this.response.substr(11,this.response.search(re)-11)+"\">"+this.response.substr(11,this.response.search(re)-11)+"</a>");
+			}
+			this.loading = false;
+			this.show();
+		}
+	);
+	}
+	
+	getLinkAndBonusForReferal(){
+		
+			this.referalNum= +this.sarCode.substr(1);
+	this.httpService.getForSimpleData('/getlinkandbonus',
+	new HttpParams().set('userid',this.noll.toString()).set('actionid',this.referalNum.toString()).set('staffid',this.accountModel.getAccount().id.toString()))
+	.subscribe(
+		data=>
+		{
+			this.response = data.toString();
+			this.header = "Выдайте бонус и не забудьте отправить сообщение аффилиату";
+			var re =/\|/gi;
+			var se = /iPhone/gi;
+			if ((window.navigator.userAgent).search(se) !=-1)
+			{
+				this.myHtml = this.sanitizer.bypassSecurityTrustHtml("<p>Выдайте бонус рефералу! Его подарок - "+this.response.substr(this.response.search(re)+1)+"</p></br><p>Аффилиат завершил акцию! Кликните на ссылку, для отправки сообщения с ссылкой на сарафанку</p></br>"+"<a href=\"sms:+"+this.response.substr(0,11)+"&body="+this.response.substr(11,this.response.search(re)-11)+"\">"+this.response.substr(11,this.response.search(re)-11)+"</a>");
+ 
+			}
+			else
+			{
+			this.myHtml = this.sanitizer.bypassSecurityTrustHtml("<p>Выдайте бонус рефералу! Его подарок - "+this.response.substr(this.response.search(re)+1)+"</p></br><p>Аффилиат завершил акцию! Кликните на ссылку, для отправки сообщения с ссылкой на сарафанку</p></br>"+"<a href=\"sms:+"+this.response.substr(0,11)+"?body="+this.response.substr(11,this.response.search(re)-11)+"\">"+this.response.substr(11,this.response.search(re)-11)+"</a>");
 			}
 			this.loading = false;
 			this.show();
@@ -72,12 +109,12 @@ export class EnterCodeComponent implements OnInit{
 	
 	enterCode(){
 		//Проверка введенного кода
-		if (this.sarCode.length == 10)
+		if (this.sarCode.length == this.codeLength)
 		{
 		this.loading = true;
 			//Распарсить введеный код
-			this.account= +this.sarCode.substr(1,4);
-			this.action = +this.sarCode.substr(5,5);
+			this.account= +this.sarCode.substr(1,this.accLength);
+			this.action = +this.sarCode.substr(this.accLength+1,this.ractLength);
 
 			//Отправить соответствующий запрос
 			switch(this.sarCode.substr(0,1)){
@@ -85,7 +122,8 @@ export class EnterCodeComponent implements OnInit{
 				this.httpService.getForSimpleData('/runningactions/changeprogressforsocial',
 													new HttpParams().set('userid',this.account.toString()).set('actionid',this.action.toString()).set('staffid',this.accountModel.getAccount().id.toString()))
 													.subscribe(data=>{
-														switch (data){
+														this.response1 =data.toString();
+														switch (this.response1){
 															case "error":{
 																this.header = "Ошибка";
 																this.myHtml = "<p>Ошибка отправки смс</p>";
@@ -122,7 +160,8 @@ export class EnterCodeComponent implements OnInit{
 							this.httpService.getForSimpleData('/coupons/deleteusedcoupon',
 													new HttpParams().set('accountid',this.account.toString()).set('actionid',this.action.toString()).set('staffid',this.accountModel.getAccount().id.toString()))
 													.subscribe(data=>{
-														switch (data){
+														this.response1 = data.toString();
+														switch (this.response1){
 															case "noexist":{
 																this.header = "Неверный код";
 																this.myHtml = "<p>Такого кода нет</p>";
@@ -140,6 +179,59 @@ export class EnterCodeComponent implements OnInit{
 														}
 														});
 													//Сообщение о выдаче бонуса аффилиату
+				break;
+				}
+				case "R":{
+				this.referal = this.sarCode.substr(1);
+				this.httpService.getForSimpleData('/referals/checkRef',
+													new HttpParams().set('ref',this.sarCode.substr(1)).set('staffid',this.accountModel.getAccount().id.toString()))
+													.subscribe(data=>{
+														this.response1 =data.toString();
+														switch (this.response1){
+															case "error":{
+																this.header = "Ошибка";
+																this.myHtml = "<p>Ошибка отправки смс</p>";
+																this.loading = false;
+																this.show();
+																break;
+															}
+															
+															case "noexist":{
+																this.header = "Неверный код";
+																this.myHtml = "<p>Такого кода нет</p>";
+																this.loading = false;
+																this.show();
+																break;
+															}
+															case "none":{
+																this.header = "Неверный код";
+																this.myHtml = "<p>Такого кода реферала не существует</p>";
+																this.loading = false;
+																this.show();
+																break;
+															}
+															case "bonusReceived":{
+																this.header = "Бонус уже получен";
+																this.myHtml = "<p>Бонус уже получен</p>";
+																this.loading = false;
+																this.show();
+																break;
+															}
+															case "finish":{
+																//Запрос на получение ссылки для аффилиата и бонуса для реферала
+																this.getLinkAndBonusForReferal();
+																break;
+															}
+															default:{
+																this.header = "Выдайте бонус";
+																this.myHtml = "<p>Выдайте бонус рефералу! Его подарок - "+data+"</p>";
+																this.loading = false;
+																this.show();
+																break;
+															}
+														}
+													});
+													//Сообщение о выдаче бонуса рефералу 
 				break;
 				}
 			}

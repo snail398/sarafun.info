@@ -1,4 +1,5 @@
 <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let action of stat" >
+ <div class="stat__ogran">
   <div class="stat__circle clr22">
     <app-modal #modal1>
     <div class="app-modal-header">
@@ -41,22 +42,19 @@
 		  </div> 
 
 					  <!-- #Блок №2.6 =Цифра и ПОДРОБНЕЕ 70%/70%-->	  
-				 <div class="stat_icon26 obriv-slova">
+				 <div class="stat_icon26 obriv-slova underlinе">
 				<a (click)= "modal1.show()" class="action_btn" data-toggle="modal">Описание акции</a>	
 		
-</div>
+				</div>
 		
       <div class="stat__icon3">
-        <p>Количество аффилиатов</p>
-        <p>Количество выполненных акций</p>
-        <p>Количество выданных бонусов за выполнение</p>
-        <p>Количество рефералов</p>
+        <p>Количество аффилиатов <span class="stat_right">{{action.countRAct}}</span></p>
+        <p>Количество выполненных акций<span class="stat_right">{{action.countComplitedRAct}}</span></p>
+        <p>Количество выданных бонусов за выполнение<span class="stat_right">{{action.countMainBonus}}</span></p>
+        <p>Количество рефералов<span class="stat_right">{{action.countMiniBonus}}</span></p>
       </div>
-      <div class="stat__icon4">
-        <p>{{action.countRAct}}</p>
-        <p>{{action.countComplitedRAct}}</p>
-        <p>{{action.countMainBonus}}</p>
-        <p>{{action.countMiniBonus}}</p>
-      </div>
+
+	
+  </div>
   </div>
 </div>

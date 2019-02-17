@@ -7,7 +7,7 @@ import { AccountModel } from '../account.model';
 import { ActionService} from '../service/action.service';
 import {Router} from '@angular/router';
 import { ModalComponent} from '../component/modal.component';
-import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl, SafeUrl,SafeHtml} from '@angular/platform-browser';
 
 @Component({  
   selector: 'app-content',
@@ -25,7 +25,7 @@ export class RunActionComponent implements OnInit{
 	 public loading = false;
 	 message:string="";
 	 header:string="";
-	 myHtml:string="";
+	 myHtml:SafeHtml="";
 	 
  constructor(private httpService: HttpService,
 			 private accountModel:AccountModel,

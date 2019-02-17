@@ -369,3 +369,26 @@ textarea { resize: none; }
    bottom:0;
    filter: blur(10px);
   }
+  
+@media only screen and (max-width: 600px){
+	 .pers__btn {
+   float:none;
+   position:relative;
+   max-width:80%;
+   text-align:center;
+   max-height:50px;
+   color:#fff;
+   padding: 2%;
+   border-radius:50px;
+   text-transform: capitalize;
+   transform: scale(1.1,1.1);
+   transition: all 0.3s ease-out 0s;
+   border:0;
+   min-width: 80%;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 5px;
+   margin-bottom: 30px;
+  }
+}

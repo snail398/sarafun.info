@@ -1,0 +1,14 @@
+<div [innerHTML]="myHtml"></div>
+
+ <app-modal #modal>
+    <div class="center  app-modal-header">
+      <h2>Поделиться</h2> 
+    </div>
+    <div class="center  app-modal-body">
+     <h4>Здесь будут кнопки репоста</h4>
+    </div>
+    <div class="app-modal-footer center">
+      <button name="subnit" type="submit" class="pers__btn blue" (click)="modal.hide()">Отменить</button>
+      
+    </div>
+  </app-modal>

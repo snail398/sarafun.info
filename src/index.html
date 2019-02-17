@@ -1,18 +1,115 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+
   <meta charset="utf-8">
-  <title>Sarafan</title>
+  <meta name="yandex-verification" content="90b25497e0d1c114" />
+  <meta name="google-site-verification" content="quPQKmou6kMRugimVPZDRJVr0WN6a9tcvdUGzAM1Rzc" />
+  <title>SaraFun</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v4.7.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ 
+	<script src="assets/js/qrcode.js"></script>
+<script>	
+
+  $(function() {
+        $(document).ready(function() {
+             $(".container ").click(function() { 
+				$('.collapse').collapse('hide');
+            });
+        });
+        
+    })
+</script>	
+ <script type="text/javascript">
+  $(function(){
+    // клик по кнопке шаринга 
+    $(document).on('click',".share_btn",function(){
+        var social = $(this).data("social");
+		var id = $(this).attr("id");
+        // урл текущей страницы
+        var url_share = location.href;
+        // если задан атрибут data-url, то берем урл из него
+        if (typeof $(this).attr("data-url") !== typeof undefined && $(this).attr("data-url") !== false) {
+            url_share = $(this).data("url");        
+        }
+        // открываем окно для репоста
+        share(social, url_share,id);
+    });
+});
+ 
+ 
+/**
+* Создание нового окна браузера для репоста в соц.сеть
+*
+* @param string social - социальная сеть, в которую будет сделан репост
+* @param string url_share - url страницы, которая будет опубликована в соц.сети
+*/
+function share(social, url_share,id){
+    // определяем ссылку для нужной соц.сети
+	
+	var request = new XMLHttpRequest();
+    var url_soc = false;
+    switch (social) {
+        case "vk":
+			request.open("GET", "http://sarafun.info:4200/runningactions/increaseRepostVK?ractionid="+id);
+			request.send();
+            url_soc = "https://vk.com/share.php?url="+url_share;
+            break;
+        case "fb":
+			request.open("GET", "http://sarafun.info:4200/runningactions/increaseRepostFB?ractionid="+id);
+			request.send();
+            url_soc = "https://www.facebook.com/sharer/sharer.php?u="+url_share;
+            break;
+        case "ok":
+            url_soc = "https://connect.ok.ru/offer?url="+url_share;
+            break;
+        case "tw":
+			request.open("GET", "http://sarafun.info:4200/runningactions/increaseRepostTW?ractionid="+id);
+			request.send();
+            url_soc = "https://twitter.com/intent/tweet?url="+url_share;
+            break;
+        case "gp":
+            url_soc = "https://plus.google.com/share?url="+url_share;
+            break;
+		case "whatsapp":
+			request.open("GET", "http://sarafun.info:4200/runningactions/increaseRepostWA?ractionid="+id);
+			request.send();
+            url_soc = "  whatsapp://send?text="+url_share;
+            break;
+		case "download":
+			request.open("GET", "http://sarafun.info:4200/runningactions/increaseRepostDownload?ractionid="+id);
+			request.send();
+            break;
+    }
+    // открытие нового окна для шаринга
+    if(url_soc){
+        // размеры окна
+        var width = 800, height = 500;
+        // центруем окно
+        var left = (window.screen.width - width) / 2;
+        var top = (window.screen.height - height) / 2;
+        // открываем окно
+        social_window = window.open(url_soc, "share_window", "height=" + height + ",width=" + width + ",top=" + top + ",left=" + left);
+        // устанавливаем на окно фокус
+        social_window.focus();
+    }
+}
+</script>
+
+  <link rel="icon" type="image/x-icon" href="assets/sarafanka.ico">
 
 </head>
+
+
+
 <body>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	
 
   <app-root></app-root>
 </body>

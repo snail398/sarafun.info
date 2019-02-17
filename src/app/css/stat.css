@@ -1,9 +1,10 @@
+.stat__ogran {min-height:300px;}
 /* Цветной фон акции*/
 .stat__circle {
     min-height:220px;
-	max-height:220px;
-    min-width: 330px;
-    max-width: 330px;
+	
+	
+    max-width: 98%;
 	max-height:auto;
     margin: 2%;
 	margin-right:5%;
@@ -15,6 +16,16 @@
     margin-left: auto;
     margin-right: auto;
   }
+   @media only screen  and (min-width:350px) { 
+  .stat__circle {
+    min-height:220px;
+	
+	min-width: 300px;
+    max-width: 300px;
+  }
+  }
+  
+
 /* Крестик удалить*/ 
 .stat__del {
     position: absolute;
@@ -39,7 +50,7 @@
 	}
 .stat_icon15 {
 		min-height: 50px;
-		max-height: 50px;
+		max-height:110px;
 		
 		padding-right:5px;
 	
@@ -48,14 +59,18 @@
 		margin-bottom:0;
 		font-size: 500%;
 	}
+		.stat_icon1 P{
+		margin-bottom:0;
+		
+	}
 	
 .stat_icon25 {
 		min-width: 100%;
 		max-width: 100%;
-		min-height: 90px;
-		max-height: 90px;
+		
+		
 		padding-left: 10%;
-		float: left;
+		
 		padding-top:0;
 	}
 
@@ -65,7 +80,7 @@
 		min-height: 20px;
 		max-height: 20px;
 		padding-left: 10%;
-		float: left;
+		
 		padding-top:0;
 	}
 
@@ -103,9 +118,8 @@
 		min-width: 55%;
 		max-width: 55%;
 		min-height: 90px;
-		max-height: 90px;
-
-		float: left;
+	
+		
 	}
 	/* Текст и ссылка */
 	h4 a .stat_icon2 {
@@ -137,15 +151,13 @@ a:active .action_btn {
 
 .stat__icon3 {
     margin: 0;
-    padding-left: 8%;
-    min-width: 90%;
-    max-width: 90%;
+    padding-left: 4%;
+    min-width: 100%;
+    max-width: 100%;
     min-height: 50%;
 	line-height: 1;
-    float: left;
 	overflow: hidden;
-	text-overflow: ellipsis;
-	word-break: break-all;
+	padding-bottom:10px;
 }
 
 .stat__icon3 p{
@@ -155,69 +167,24 @@ a:active .action_btn {
 	padding:0;
 
 }
+     @media only screen  and (max-width:350px) { 
+.stat__icon3 p  {
+			 font-size: 10px;
+		 }
+	 }
 
 
-/* <БЛОК №4*/
-.stat__icon4 {
-    margin: 0;
-
-
-    min-width: 10%;
-    max-width: 10%;
-    min-height: 50%;
-    max-height: 50%;
-    text-align:center;
-    float: left;
-	line-height: 1;
-}
-.stat__icon4 p{
-    color: #ffffff;
-    font-size: 12px;
-	margin:0;
-	padding:0;
-
+.stat_right{
+	float:right;
+	padding-right:10px;
 }
 
 
 
-/* <БЛОК №5*/
-.stat__icon5 {
-    margin: 0;
-    padding-top: 2%;
-    padding-left: 10%;
-    min-width: 65%;
-    max-width: 65%;
-    min-height: 25%;
-    max-height: 25%;
-    text-align:left;
-    float: left;
-	white-space:pre;
-	text-align:center;
-}
-
-a.stat__icon5 {
-    color: #ffffff;
-    font-size: 10px;
-}
 
 
-/* <БЛОК №6*/
-.stat__icon6 {
-    margin: 0;
-    padding-top: 6%;
-    padding-left: 10%;
-    min-width: 100%;
-    max-width: 100%;
-    text-align:right;
-    float: left;
-    min-width: 350px;
-    max-width: 350px;
-}
 
-h3.stat__icon6 {
-color: #ffffff;
-font-size: 10px;
-}
+
 
 
   /* кнопка */

@@ -1,13 +1,25 @@
+<div class="anticont">
+<div class="my-container ">
+    <ng-template #customLoadingTemplate>
+        <div class="custom-class">
+          
+        </div>
+    </ng-template>
+ 
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+    
+</div> 
 
- <div class="forma">
+ <div class="center">
+ <div class="forma  center col-md-12 col-xs-12 col-sm-12 col-xl-12 col-lg-12">
 
- <div class="center  col-md-12 col-xs-12 col-sm-12 col-xl-12 col-lg-12">
 
- <div class="tab" role="tabpanel">
+
+ <div class="tab center" role="tabpanel">
 
  <ul class="nav nav-tabs" role="tablist">
  <li role="presentation" class="active center col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12  "><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Войти</a></li>
- <li role="presentation" class="center        col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 " ><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Зарегестрироваться</a></li>
+ <li role="presentation" class="center        col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 " ><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Зарегистрироваться</a></li>
  </ul>
 
  <div class="tab-content tabs">
@@ -47,11 +59,11 @@
  </div>
  <div class="form-group">
  <label for="exampleInputEmail1">Фамилия</label>
- <input type="text" class="form-control" id="exampleInputEmail1">
+ <input type="text" class="form-control" id="exampleInputEmail2">
  </div>
  <div class="form-group">
  <label for="exampleInputEmail1">E-mail</label>
- <input type="email" class="form-control" id="exampleInputEmail1">
+ <input type="email" class="form-control" id="exampleInputEmail3">
  </div>
  <div class="form-group">
  <label for="exampleInputPassword1">Пароль</label>
@@ -59,11 +71,12 @@
  </div>
  
  <div class="center">
- <button name="submit" type="submit" class="log__btn purple">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
+ <button name="submit" type="submit" class="log__btn purple">ЗАРЕГИСТРИРОВАТЬСЯ</button>
  </div>
  
  </form>
  </div>
+  </div>
  </div>
 </div>
  </div>

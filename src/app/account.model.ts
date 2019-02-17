@@ -10,9 +10,24 @@
 		
         constructor(private router: Router) {
 			this.menuVis =true;
+			var queryStr = this.parseQueryString(window.location.search),
+		someVar1 = queryStr['login'];
+		if (someVar1 == undefined)
 		this.router.navigate(['/admin/login']);
 		}
 
+		parseQueryString(strQuery:string) {
+    var strSearch   = strQuery.substr(1),
+        strPattern  = /([^=]+)=([^&]+)&?/ig,
+        arrMatch    = strPattern.exec(strSearch),
+        objRes      = {};
+    while (arrMatch != null) {
+        objRes[arrMatch[1]] = arrMatch[2];
+        arrMatch = strPattern.exec(strSearch);
+    }
+    return objRes;
+};
+		
         public setAccount(account) { 
             this.currentAccount = account;
         }

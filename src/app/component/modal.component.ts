@@ -1,5 +1,7 @@
 import { Component} from '@angular/core';
   import { Injectable } from '@angular/core';
+  import * as qrcode from '../js/qrcode';
+  import {Action} from '../entity/action';
   
 @Injectable()
 @Component({
@@ -29,6 +31,12 @@ export class ModalComponent {
   public visibleAnimate = false;
 
   public show(): void {
+    this.visible = true;
+    setTimeout(() => this.visibleAnimate = true, 100);
+  }
+  
+   public show1(action:Action): void {
+
     this.visible = true;
     setTimeout(() => this.visibleAnimate = true, 100);
   }

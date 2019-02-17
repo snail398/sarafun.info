@@ -13,4 +13,6 @@ export class Action{
     timeEnd:number;
 	between:number;
     condition:string;
+	pathToQRCode:string;
+    pathToPDF:string;
 }

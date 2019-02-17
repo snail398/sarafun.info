@@ -1,0 +1,144 @@
+﻿<!doctype html>
+<html lang="en"  prefix="og: http://ogp.me/ns# " class="flag-limitFabrikSave-on flag-facebookOauthButton-on flag-videoVHSCover-on flag-videoVHSShareTools-on flag-videoVHSEmbeddedOnly-on flag-removeInternationalEdition-on flag-piiBlockDFP-on flag-indexAsHeaderBidder-on flag-caslOpt-on desktop  has-comments blog-bits section-technology wf-active has-js has-flexbox has-flexboxlegacy has-canvas has-canvastext has-webgl has-no-touch has-geolocation has-postmessage has-websqldatabase has-indexeddb has-hashchange has-history has-draganddrop has-websockets has-rgba has-hsla has-multiplebgs has-backgroundsize has-borderimage has-borderradius has-boxshadow has-textshadow has-opacity has-cssanimations has-csscolumns has-cssgradients has-cssreflections has-csstransforms has-csstransforms3d has-csstransitions has-fontface has-generatedcontent has-video has-audio has-localstorage has-sessionstorage has-webworkers has-applicationcache has-svg has-inlinesvg has-smil has-svgclippaths has-cors tr-directwrite tr-aa-unknown-subpixel edition-domestic has-ribbon type-size-small has-top-ad has-ad-TopAd has-ad-Box1 has-ad-MiddleRight viewport-small viewport-small-10 viewport-small-20 viewport-medium viewport-medium-10 viewport-medium-20 viewport-medium-30 viewport-medium-31 viewport-medium-40 viewport-medium-50 viewport-medium-60 viewport-large viewport-large-10 viewport-large-11">
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="thumbnail_150" content="https://b.radikal.ru/b43/1901/47/6e89b59b4b48.jpg"/>
+	<meta name="twitter:card" value="summary">
+	<meta name="twitter:title" content="Сарафанка от друга" />
+	<meta name="twitter:url" content="http://sarafun.info/assets/reposted.html" />
+	<meta name="twitter:description" content="Друг прислал Вам сарафанку, а друзья плохого не посоветуют" />
+	<meta name="twitter:image" content="https://b.radikal.ru/b43/1901/47/6e89b59b4b48.jpg"/>
+	<meta itemprop="thumbnailUrl" content="https://b.radikal.ru/b43/1901/47/6e89b59b4b48.jpg" name="thumbnail" />
+	<meta name="twitter:site" content="@nytimesbits">
+	<meta property="og:title" content="Сарафанка от друга" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://sarafun.info/assets/reposted.html"/>
+	<meta property="og:site_name" content="SaraFun" />
+	<meta property="og:description" content="Друг прислал Вам сарафанку, а друзья плохого не посоветуют" />
+	<meta property="og:image" content="https://b.radikal.ru/b43/1901/47/6e89b59b4b48.jpg"/>
+	<title>SaraFun</title>
+
+<style type="text/css">
+body {
+background:#1f0b37;
+margin-left: auto;
+margin-right: auto;
+}
+
+@media only screen and (min-width: 601px){ 
+.btn {  
+   max-width:200px;
+   min-width:200px;
+   padding-top: 1vh;
+   padding-bottom: 1vh;
+   border-radius:50px;
+   text-align: center;
+}
+}
+  @media only screen and (max-width: 600px){
+.btn {
+   position:relative;
+   max-width:100vw;
+   min-width: 100vw;
+
+   padding-top: 1vh;
+   padding-bottom: 1vh;
+   border-radius:50px;
+   text-align: center;
+   }
+}
+
+.btn a {
+	 margin-top:auto;
+	 margin-bottom:auto;
+	 color:#fff;
+	 text-decoration: none;
+	 font-size:16px;
+	 font-family:"Arial";
+  }
+.kartinka {
+
+text-align:center;
+ }
+
+img {
+
+max-width:100vw;
+min-height: 90vh;
+max-height: 90vh;
+	}
+	
+.knopka1 {
+
+max-height: 10vh;
+min-width:50vw;
+max-width:50vw;
+float:right;
+
+ }	
+ 
+ .knopka2 {
+
+max-height: 10vh;
+min-width:50vw;
+max-width:50vw;
+ }
+ 
+.btn1 {
+background: linear-gradient(to left, #FB2575 , #8936D3);
+margin-left: 1vw;
+
+}
+
+.btn2 {
+background: linear-gradient(to right, #FB2575 , #8936D3);
+float:right;
+margin-right: 1vw;} 
+}
+</style>	
+	
+</head>
+<body>
+
+<div class="kartinka">
+
+	<img id="sar-img" src="" alt="" src="" >
+</div >
+<div class="knopka1">
+	<div class="btn btn1">
+    <a id="sar-pdf" class="download-button " href="" >Скачать себе</a>
+    </div >
+</div>		
+<div class="knopka2">		
+	<div class="btn btn2">
+	<a class="download-button" href="http://sarafun.info">Подробнее</a>
+	</div>
+</div>	
+	 <script>
+	 var parseQueryString = function (strQuery) {
+    var strSearch   = strQuery.substr(1),
+        strPattern  = /([^=]+)=([^&]+)&?/ig,
+        arrMatch    = strPattern.exec(strSearch),
+        objRes      = {};
+    while (arrMatch != null) {
+        objRes[arrMatch[1]] = arrMatch[2];
+        arrMatch = strPattern.exec(strSearch);
+    }
+    return objRes;
+};
+	 
+        var queryStr = parseQueryString(window.location.search),
+		someVar1 = queryStr['link'];
+		var pdf = "http://sarafun.info:4200/sarafunkas/"+someVar1;
+		var jpg = "http://sarafun.info:4200/sarafunkas/jpg/"+ someVar1.substring(0,someVar1.length-4)+".png";
+		document.getElementById("sar-img").src = jpg;
+		document.getElementById("sar-pdf").href = pdf;
+
+		var request = new XMLHttpRequest();
+		request.open("GET", "http://sarafun.info:4200/runningactions/increasePdfUsages?link="+someVar1);
+		request.send();	
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!--<p>Акции в которых вы участвуете</p>
+<div *ngFor="let runningAction of runningActions">
+
+
+
+<p> Твой бонус: {{getAction(runningAction.actionTitleID).reward}}</p>
+<p> Бонус друзей: {{getAction(runningAction.actionTitleID).supportReward}}</p>
+<p> Статус: {{stringComplited(runningAction.complited)}}</p>
+<p> Прогресс акции: {{runningAction.percentOfComplete}}/{{getAction(runningAction.actionTitleID).target}} </p> 
+<div [innerHTML]="getSarafanka(runningAction)"></div>
+<button (click)="show()">Поделиться</button>
+</div>-->
+
+
+<div class="anticont"  > 
+<div class="priv center" > 
+<img class="robot" src="assets/img/hello2.png" alt=""> 
+<!--<img class="robot" src="assets/img/hello_empty.png" alt=""> 
+<div class="oblako">
+<h2>Привет дорогой друг!</h2>
+<h3>Это твой личный кабинет.</h3> 
+<h4 class="obriv-slova">Ниже представленны акции, в которых ты участвуешь.</h4> 
+<h4>Делись сарафанками с друзьями и получай бонусы!</h4> 
+</div>
+
+ </div>
+<div >
+  <!-- #Адаптивный блок (где row)-->			  
+    <form class="form-horizontal">
+  <div  class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" *ngFor="let runningAction of runningActions" >
+	  <!-- #Все акции одного цвета-->	
+  
+  <app-modal #modal>
+    <div class="center  app-modal-header">
+      <h2>Удаление</h2> 
+    </div>
+    <div class="center  app-modal-body"> 
+     <h4>Вы точно хотите удалить эту запущенную акцию?</h4>
+    </div>
+    <div class="app-modal-footer center">
+	<button name="subnit" type="submit" class="pers__btn orange" (click)= "deleteRAction(runningAction)">Удалить</button>
+      <button name="subnit" type="submit" class="pers__btn blue" (click)="modal.hide()">Отменить</button>
+      
+    </div>
+  </app-modal>
+  
+    <app-modal #modal1>
+    <div class="app-modal-header">
+      Описание
+    </div> 
+    <div class="app-modal-body" [innerHTML]="getEstAdressForAction(runningAction)">
+	
+    </div>
+    <div class="app-modal-footer">
+      <button type="button" class="btn btn-primary" (click)="modal1.hide()">Отмена</button>
+    </div>
+  </app-modal>
+
+   <app-modal #modal2>
+    <div class="center  app-modal-header">
+      <h2>Поделиться</h2> 
+    </div>
+    <div class="center  app-modal-body" [innerHTML]="getSocial(runningAction)">
+     <h4>Здесь будут кнопки репоста</h4>
+	 <div [innerHTML]="getSarafanka(runningAction)"></div>
+  </div>
+    <div class="app-modal-footer center">
+      <button name="subnit" type="submit" class="pers__btn blue" (click)="modal2.hide()">Отменить</button>
+      
+    </div>
+  </app-modal>
+  
+	 <div class="useraction__circle clr22" >
+	 
+				<!-- #Крестик удалить-->
+				 <div class="useraction__del">
+					 <h3><a (click)= "modal.show()"><i class="fa fa-times" aria-hidden="true"></i></a>  </h3>
+				 </div>
+		 
+				<!-- #Блок №1 с иконкой человека 30%/30%-->			
+				 <div class="useraction__icon1 ">
+					 <!-- #Иконка человека-->
+					 <h5> Прогресс акции:</h5>
+					 <h1> {{runningAction.percentOfComplete}}/{{getAction(runningAction.actionTitleID).target}}</h1>
+					 	
+					  <div class="useraction__icon15">
+					 <!-- #Цифра под иконкой-->
+					 <div >
+					 <h6 class="obriv-slova">Привлеки {{ getFriendCount(runningAction.actionTitleID) }}  <br> и получи приз</h6>
+					 </div><br>
+						
+						 </div>	
+
+					 </div>	
+					 
+				
+		 
+				<!-- #Блок №2 =Цифра и ПОДРОБНЕЕ 70%/70%-->	  
+				 <div class="useraction__icon2">
+					 <!-- #=Цифра-->
+					 <h5><span class="">Твой приз :</span></h5><h5><span class="obriv-slova"> {{getAction(runningAction.actionTitleID).reward}}</span></h5>
+					 
+					 <h5><span class="">Бонус друзей:</span></h5><h5><span class="obriv-slova"> {{getAction(runningAction.actionTitleID).supportReward}}</span></h5>
+		  </div> 
+
+					  <!-- #Блок №2.6 =Цифра и ПОДРОБНЕЕ 70%/70%-->	  
+				 <div class="useraction__icon26 obriv-slova">
+				
+		
+</div>
+		
+		
+		
+		 
+		<!-- #Блок №3 -->	 	
+		 <div class="useraction__icon3">
+		
+		 </div>
+		 
+		<!-- #Блок №4 -->	  
+		 <div class="useraction__icon4 center"><a (click)= "modal1.show()" class="action_btn" data-toggle="modal">ЗАВЕДЕНИЕ</a>	</div>
+		<!-- #Блок №5 -->	
+		
+		 <div class="useraction__icon5 center" *ngIf="getAction(runningAction.actionTitleID).between > 0">
+		 <a (click)="modal2.show()" data-toggle="modal" *ngIf="runningAction.complited == 0;else unset1">ПОДЕЛИТЬСЯ</a> 
+		<ng-template #unset1>  
+		 <a  [href]="getFinalCoupon(runningAction)"  data-toggle="modal" >СКАЧАТЬ САРАФАНКУ</a> 
+        </ng-template> 
+
+		 </div>
+
+			<!-- #Блок №6 -->	  
+		 <div class="useraction__icon6"><p>Дней до конца акции: {{getAction(runningAction.actionTitleID).between}} <span class="fa fa-circle" aria-hidden="true"></span> </p> </div>
+		
+	 </div>
+	  
+
+ </div>
+
+	</form>
+ </div>
+
+ </div>
+ 

@@ -1,23 +1,35 @@
+.underlinе {
+text-decoration: underline;
+}
+.action__ogran {min-height:350px;}
+
 /* Цветной фон акции*/
 .action__circle {
     min-height:220px;
-	max-height:220px;
-    min-width: 330px;
-    max-width: 330px;
+    max-width: 98%;
     border-radius: 5%;
     position: relative;
     padding-left: auto;
     padding-right: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom:20%;
+    margin-bottom:;
     padding-top: 2%;
+  }
+  
+ @media only screen  and (min-width:350px) { 
+  .action__circle {
+    min-height:220px;
+	
+	min-width: 300px;
+    max-width: 300px;
+  }
   }
 /* Крестик удалить*/ 
 .action__del {
     position: absolute;
-    top:-7%;
-    right: 3%;
+    top:-5%;
+    right: 5%;
     max-width: 10%;
     max-height: 15%;
 }  
@@ -36,7 +48,7 @@
 	}
 .action__icon15 {
 		min-height: 50px;
-		max-height: 50px;
+		max-height: 100px;
 		padding-left:5px;
 		padding-right:5px;
 	
@@ -62,8 +74,8 @@
 		min-height: 20px;
 		max-height: 20px;
 		padding-left: 10%;
-		float: left;
 		padding-top:0;
+		font-size:14px;
 	}
 
 		
@@ -96,13 +108,12 @@
 		text-align:center;
 		text-align:center;
 		padding: 2%;
-		padding-top: 10px;
+		padding-top: 20px;
 		min-width: 55%;
 		max-width: 55%;
 		min-height: 90px;
-		max-height: 90px;
+	
 
-		float: left;
 	}
 	/* Текст и ссылка */
 	h4 a .action__icon2 {
@@ -134,12 +145,13 @@ a:active .action_btn {
 
 .action__icon3 {
     margin: 0;
-    padding-left: 10%;
+    padding-left: 5%;
     min-width: 100%;
     max-width: 100%;
     min-height: %;
 	max-height:25px;
-    float: left;
+    margin-top:5px;
+	margin-bottom:5px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	word-break: break-all;
@@ -155,13 +167,15 @@ font-size: 500%;
 .action__icon4 {
     margin: 0;
     padding-top: 1%;
-    padding-left: 10%;
-    min-width: 35%;
-    max-width: 35%;
+    padding-left: 5%;
+	padding-bottom:15px;
+    min-width: 38%;
+    max-width: 38;
     min-height: 25%;
     max-height: 25%;
     text-align:left;
     float: left;
+	font-size: 15px;
 }
 
 a.action__icon4 {
@@ -175,14 +189,14 @@ a.action__icon4 {
     margin: 0;
     padding-top: 1%;
     padding-left: 0;
-    min-width: 65%;
-    max-width: 65%;
+    min-width: 60%;
+    max-width: 60%;
     min-height: 25%;
     max-height: 25%;
     text-align:left;
-    float: left;
 	white-space:pre;
 	text-align:center;
+	font-size: 15px;
 }
 
 a.action__icon5 {
@@ -193,16 +207,14 @@ a.action__icon5 {
 
 /* <БЛОК №6*/
 .action__icon6 {
-    margin: 0;
-    padding-top: 6%;
-    margin-left: 5%;
-    min-width: 90%;
-    max-width: 90%;
+ 
+    padding-top: 5px;
+	padding-bottom:2px;
+    padding-right: 5%;
     text-align:right;
-    float: left;
-
 
 }
+
 
 h3.action__icon6 {
 color: #ffffff;

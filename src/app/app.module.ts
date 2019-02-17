@@ -1,3 +1,4 @@
+import './js/ajquery-3.3.1.min.js';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -22,6 +23,9 @@ import { StaffComponent } from './component/staff.component';
 import { RunActionComponent } from './component/run.action.component';
 import { EnterCodeComponent } from './component/enter.code.component';
 import { SOHComponent } from './component/soh.component';
+import { UserHomeComponent } from './component/user.home.component';
+import { ReferalComponent } from './component/referal.component';
+import { QrComponent } from './component/qr.component';
 
  
 import { AccountModel } from './account.model';
@@ -33,7 +37,8 @@ import { BrandComponent } from './component/brand.component';
 import { ModalComponent } from './component/modal.component';
 
 import { HttpClientModule }   from '@angular/common/http';
-import './js/salvattore.min.js';
+
+
 import './js/bootstrap.js';
 import './js/jquery.maskedinput.min.js';
 import { TextMaskModule } from 'angular2-text-mask';
@@ -53,6 +58,7 @@ import { NgxLoadingModule } from 'ngx-loading';
 	StatComponent,
 	BrandComponent,
 	TestComponent,
+	QrComponent,
 	EstComponent,
 	CreateEstComponent,
 	EditEstComponent,
@@ -62,10 +68,12 @@ import { NgxLoadingModule } from 'ngx-loading';
 	RunActionComponent,
 	EnterCodeComponent,
 	ModalComponent,
-	SOHComponent
+	SOHComponent,
+	UserHomeComponent,
+	ReferalComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'my-app'}) ,
     AppRoutingModule, 
 	HttpClientModule,
 	FormsModule,

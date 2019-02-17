@@ -1,9 +1,13 @@
+
 .fon {
 	position:relative;
 background:  linear-gradient(to bottom, #2e3a6a,#320b35);
 margin-bottom:20%;
 margin:0;
 }
+
+.zav__ogran {min-height:300px;}
+
 .nav > li > a {
 	display:inline;
 
@@ -67,7 +71,7 @@ margin:0;
 }
 
 .tab .tab-content2 {
-     min-width: 450px;
+     min-width: 300px;
      padding: 0 0 0 0;
      margin-top: 0;
  width: 100%;
@@ -244,7 +248,7 @@ min-height: 40%;
 max-height: 40%;
 float: left;
 text-align: center;
-margin-right:5%;
+
 }
 h1 a .zav__icon2 {
 color: #ffffff;
@@ -277,10 +281,7 @@ font-size: 500%;
 .zav__del {
 position: absolute;
 top:-5%;
-right: -6%;
-min-width: 50px;
-max-width: 10%;
-max-height: 15%;
+right: 3%;
 
 
 }
@@ -288,7 +289,7 @@ max-height: 15%;
 
 .zav__icon3 {
 margin: 0;
-
+margin-top:10px;
 padding-left: 10%;
 min-width: 100%;
 max-width: 100%;
@@ -309,7 +310,7 @@ font-size:100%;
 
 .zav__icon35 {
 margin: 0;
-
+margin-top:10px;
 padding-left: 10%;
 min-width: 100%;
 max-width: 100%;
@@ -331,7 +332,7 @@ font-size:100%;
 margin-top:10px;
 min-width: 50%;
 max-width: 50%;
-
+margin-bottom:10px;
 max-height: 10%;
 float: right;
 text-align: center;
@@ -346,9 +347,9 @@ padding: 10%;
 
 .zav__circle {
 background: linear-gradient(#2e3a6a,#320b35);
-    min-height:220px;
-    min-width: 330px;
-    max-width: 330px;
+    min-height:200px;
+    min-width: 200px;
+    max-width: 90%;
 margin-left: 5%;
 margin-right: 5%;
 border-radius: 5%;
