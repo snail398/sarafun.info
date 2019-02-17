@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
  
 import { AppComponent } from './component/app.component';
 import { LandingComponent } from './component/landing.component';
+import { LandinggComponent } from './component/landingg.component';
 import { ActionsComponent } from './component/actions.component';
 import { AdminkaComponent } from './component/adminka.component';
 import { MenuComponent } from './component/menu.component';
@@ -49,6 +50,7 @@ import { NgxLoadingModule } from 'ngx-loading';
   declarations: [
     AppComponent,
 	LandingComponent,
+	LandinggComponent,
 	ActionsComponent,
 	AdminkaComponent, 
 	LoginComponent,
