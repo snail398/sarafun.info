@@ -11,6 +11,7 @@ import * as qrcode from '../js/qrcode';
 
 //comment
 //secondcomment
+
 @Component({   
   selector: 'app-content',
   templateUrl:'../html/actions.component.html',
