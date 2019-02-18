@@ -27,7 +27,8 @@
     "ngx-loading": "^3.0.1",
     "qrcode-generator": "^1.4.1",
     "rxjs": "~6.3.3",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "webpack-dev-server": ">=3.1.11"
   },
    "engines": {
     "node": "10.15.1",
