@@ -2566,7 +2566,7 @@ button {
 	}
 	.header-question {
 		margin-bottom: 200px;
-		margin-top: 250px
+		margin-top: 250px;
 	}
 	.header-question h2 {
 		padding-bottom: 20px;
@@ -2610,7 +2610,7 @@ button {
 		font-size: 30px
 	}
 	.registration-composition p {
-		font-size: 18px;
+		font-size: 20px;
 		padding: 0 30px
 	}
 	.planning-composition {
