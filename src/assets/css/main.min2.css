@@ -2086,13 +2086,32 @@ button {
 		height: 54px;
 		margin-top: 30px;
 		margin-bottom: 50px;
-		margin-right: 50px
+		margin-left: 20;
+		margin-right: 20px;
+		
+		
 	}
+	
+
+	
 	.header-download .button {
 		padding: 10px 10px;
-		width: 200px;
-		font-size: 16px
+		width: 170px;
+		font-size: 14px;
+		margin-left: 50px;
+		
 	}
+	
+		.header-download  .brder {
+		padding: 10px 10px;
+		width: 170px;
+		font-size: 14px;
+		border: solid 1px #fc2d6c;
+		background: rgba(0, 170, 238, 0);
+	-webkit-border-radius: 0 54px 54px 0;
+	border-radius: 54px 54px 54px 54px;
+	}
+	
 	.header-composition  {
 		margin-top: 50px;
 	}
@@ -2217,9 +2236,22 @@ button {
 	}
 	.header-download .button {
 		padding: 10px 10px;
-		width: 200px;
-		font-size: 16px
+		width: 130px;
+		font-size: 10px;
+		margin-left: 1px;
+		
 	}
+	
+	.header-download  .brder {
+		padding: 10px 10px;
+		width: 130px;
+		font-size: 10px;
+		border: solid 1px #fc2d6c;
+		background: rgba(0, 170, 238, 0);
+		-webkit-border-radius: 0 54px 54px 0;
+		border-radius: 54px 54px 54px 54px;
+	}
+	
 	.header-composition  {
 		margin-top: 20px;
 	}
@@ -2343,6 +2375,7 @@ button {
 }
 
 @media only screen and (min-width:768px) and (max-width:992px) {
+	
 	.site-header {
 		margin-bottom: 100px
 	}
@@ -2381,11 +2414,8 @@ button {
 		margin-bottom: 50px;
 		margin-right: 50px
 	}
-	.header-download .button {
-		padding: 10px 10px;
-		width: 200px;
-		font-size: 16px
-	}
+
+	
 	.header-composition  {
 		margin-top: 20px;
 	}
@@ -2506,15 +2536,12 @@ button {
 }
 
 @media only screen and (min-width:481px) and (max-width:767px) {
-	.header-line {
-		margin-bottom: 120px
-	}
 	.site-header {
-		margin-bottom: 0
+		margin-bottom: 100px
 	}
-	.header-menu {
+		.header-menu {
 		text-align: center;
-		font-size: 18px;
+		font-size: 16px;
 		margin-top: 20px;
 		margin-bottom: 0;
 		height: 54px
@@ -2538,143 +2565,204 @@ button {
 		display: inline-block
 	}
 	.header-menu ul li a {
-		margin: 0 20px
-	}
-	.header-img {
-		text-align: center
-	}
-	.header-img img {
-		max-width: 80%
-	}
-	.header-composition {
-		text-align: center;
-		margin-top: 0
-	}
-	.header-composition p {
-		font-size: 16px;
-		float: none;
-		display: inline-block
-	}
-	.header-composition h1 {
-		font-size: 36px;
-		float: none;
-		display: inline-block;
-	}
-
-	.header-composition img {
-		top: 15%
-	}
-	.header-question {
-		margin-bottom: 200px;
-		margin-top: 250px;
-	}
-	.header-question h2 {
-		padding-bottom: 20px;
-		font-size: 36px
-	}
-	.header-question .button {
-		padding: 12px 12px;
-		width: 250px;
-		font-size: 14px;
-		margin-bottom: 30px
-	}
-	.friends {
-		margin-top: 50px
-	}
-	.friends h2 {
-		font-size: 30px
-	}
-	.friends .conditions p {
+	margin: 0 25px}
+	
+	.header-download {
 		text-align: right;
-		font-size: 24px;
-		padding-top: 6px
+		height: 54px;
+		margin-top: 30px;
+		margin-bottom: 50px;
+		margin-right: 50px
 	}
-	.friends .friends-list ul {
-		font-size: 13px;
-		padding-left: 0
-	}
-	.friends .friends-list ul li {
-		margin-top: 12x
-	}
-	.friends .friends-list ul li img {
-		padding-right: 10px
-	}
-	.registration {
-		margin-top: 50px
-	}
-	.registration-composition {
-		text-align: center;
-		height: 250px
-	}
-	.registration-composition h2 {
-		font-size: 30px
-	}
-	.registration-composition p {
-		font-size: 20px;
-		padding: 0 30px
-	}
-	.planning-composition {
-		height: 330px;
-		text-align: center
-	}
-	.planning-composition h2 {
-		font-size: 28px
-	}
-	.planning-composition p {
-		font-size: 17px;
-		padding: 0 30px
-	}
-	.meeting {
-		margin-top: 100px
-	}
-	.meeting-composition {
-		text-align: center;
-		height: 250px
-	}
-	.meeting-composition h2 {
-		font-size: 26px
-	}
-	.meeting-composition p {
+	.header-download .button {
+		padding: 10px 10px;
+		width: 200px;
 		font-size: 16px
 	}
-	.statistics {
-		margin-top: 80px
+	.header-composition  {
+		margin-top: 20px;
+		text-align: center;
 	}
-	.statistics-img img {
-		width: 100%;
-		padding-top: 60px
+	
+	.header-composition h2 {
+		font-size: 25px;
+		text-align:center;
+		margin-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	.header-composition h1 {
+		font-size: 18px;
+		text-align: center;
+		float: center;
+		
+	}
+	
+	.header-composition p {
+		font-size: 18px;
+		text-align: center;
+		float: center;
+	}
+	
+
+	
+	.header-img {
+		margin-left: 15%;
+		width: 60%;
+		margin-top: -50px;
+		
+	}
+
+	.new-client {
+		margin-top: 50px
+	}
+	.new-client h2 {
+		font-size: 30px
+	}
+	.new-client .conditions p {
+		font-size: 25px;
+		padding-top: 6px
+	}
+
+	.registration-composition {
+		height: 350px;
+		margin-top: 0px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.registration-composition h2 {
+		font-size: 25px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.registration-composition .button {
+		padding: 12px 12px;
+		width: 80%;
+		font-size: 20px;
+		margin-top: 20px;
+		margin-bottom: 50px;
+		margin-left: 10%;
+	}
+	
+	.registration-composition p {
+		font-size: 20px;
+		text-align: center;
+	}
+	.registration-composition .button-shop {
+		padding: 0;
+		margin: 0;
+		border-radius:0;
+		
+		
+	
+
+	}
+	.download-app {
+
+		display: table; 
+		margin: 20px auto; 
+		text-align: center;
+		
+	
+	}	
+	.registration-composition .img {
+
+		width: 60px;
+		text-align: center;
+		padding: 0px;
+		margin-right: 20px;
+	
+	}	
+	.planning {
+	    margin-top: 0px;
+	}
+	.planning-composition {
+		height: 300px;
+		margin-top: -20px;
+	}
+	.planning-composition h2 {
+		font-size: 35px;
+		text-align: center;
+	}
+	.planning-composition p {
+		font-size: 20px;
+		text-align: center;
+	}
+	
+	
+	.meeting {
+		margin-top: 50px;
+	}
+	.meeting-composition {
+		height: 300px;
+		margin-top: 0px;
+	}
+	.meeting-composition h2 {
+		font-size: 35px;
+		margin-top: 0px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.meeting-composition p {
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.statistics {
+		margin-top: 0px;
 	}
 	.statistics-composition {
+		height: 400px;
+		margin-top: 0px;
+		margin-left: auto;
+		margin-right: auto;
 		text-align: center;
-		height: 320px
 	}
 	.statistics-composition h2 {
-		font-size: 22px
+		font-size: 35px;
+		text-align: center;
+				margin-left: auto;
+		margin-right: auto;
 	}
+	
 	.statistics-composition p {
-		font-size: 14px
+		font-size: 20px;
+		padding-left: 0px;
+		text-align: center;
+				margin-left: auto;
+		margin-right: auto;
 	}
 	.statistics-composition .button {
-		padding: 12px 12px;
-		width: 220px;
-		font-size: 14px;
-		margin-top: 20px
+				margin-left: auto;
+		margin-right: auto;
+width: 80%;
+		font-size: 20px;
 	}
+
+	
+	
+	.statistics-composition a {
+	    text-align: center;
+				margin-left: auto;
+		margin-right: auto;
+	}
+	
 	.video-watch {
 		margin-top: 80px;
-		height: 300px
+		height: 350px
 	}
 	.video-watch h2 {
-		padding-top: 50px
+		padding-top: 75px
 	}
 	.connect {
 		margin-top: 100px
 	}
 	.connect a {
-		font-size: 26px
+		font-size: 34px
 	}
 	.footer p {
-		font-size: 14px
+		font-size: 20px
 	}
 }
 
@@ -2719,160 +2807,230 @@ button {
 	.header-img img {
 		max-width: 80%
 	}
-	.header-composition {
+	.header-composition  {
+		margin-top: 20px;
 		text-align: center;
-		margin-top: 0
+
 	}
-	.header-composition p {
-		font-size: 16px;
-		float: none;
-		display: inline-block
+	
+	.header-composition h2 {
+		font-size: 20px;
+		text-align:center;
+		margin-bottom: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
+	
 	.header-composition h1 {
-		font-size: 16px;
-		float: none;
-		display: inline-block
+		font-size: 12px;
+		text-align: center;
+		float: center;
+		
+	}
+	
+	.header-composition p {
+		font-size: 12px;
+		text-align: center;
+		float: center;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+
+	
+	.header-img {
+		margin-left: 15%;
+		width: 60%;
+		margin-top: -20px;
+		
 	}
 
-	.header-composition img {
-		top: 15%
-	}
-	.header-question {
-		margin-bottom: 200px;
-		margin-top: 300px
-	}
-	.header-question h2 {
-		padding-bottom: 10px;
-		font-size: 30px
-	}
-	.header-question .button {
-		padding: 12px 12px;
-		width: 250px;
-		font-size: 14px;
-		margin-bottom: 30px
-	}
-	.friends {
-		margin-top: 50px;
-		text-align: center
-	}
-	.friends h2 {
-		font-size: 28px;
-		text-align: center
-	}
-	.friends .conditions p {
-		text-align: center;
-		font-size: 24px;
-		padding-top: 0
-	}
-	.friends .friends-list {
-		text-align: center
-	}
-	.friends .friends-list ul {
-		font-size: 15px;
-		padding-left: 10px;
-		margin-top: 20px
-	}
-	.friends .friends-list ul li {
-		margin-top: 15x
-	}
-	.friends .friends-list ul li img {
-		padding-right: 10px
-	}
-	.registration {
+	.new-client {
 		margin-top: 50px
 	}
-	.registration-composition {
-		margin-top: 0;
-		text-align: center;
+	.new-client h2 {
+		font-size: 20px
+	}
+	.new-client .conditions p {
+		font-size: 15px;
+		padding-top: 6px
+	}
+	
+	
+	
+.conditions {
+	margin-bottom: 0px;
+	}
+	.registration {
 		height: 200px;
-		padding: 0
+	}
+	.registration-img {
+		background: url(assets/img/plashka.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 12px 5px;
+		text-align: center;
+		margin-top: -50px;
+		margin-bottom: -50px;
+		
+		
+	}
+	
+	.registration-composition {
+		height: 350px;
+		margin-top: 0px;
+		text-align: center;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	.registration-composition h2 {
 		font-size: 25px;
-		padding: 0
+		margin-bottom: 20px;
+		text-align: center;
+		margin-top: 0px;
+	}
+	.registration-composition .bottom {
+		margin-bottom: 10px;
 	}
 	.registration-composition p {
-		font-size: 14px;
-		padding: 0
+		font-size: 15px;
+		text-align: center;
 	}
-	.planning {
-		margin-top: 30px;
-		margin-bottom: 0
+	.registration-composition .button {
+		padding: 12px 12px;
+		width: 80%;
+		font-size: 10px;
+		margin-top: 20px;
+		margin-bottom: 50px;
+		margin-left: 10%;
 	}
-	.planning .planning-composition {
-		margin-top: 0;
+	.registration-composition .button-shop {
 		padding: 0;
-		height: 120px;
-		text-align: center
+		margin: 0;
+		border-radius:0;
+	
+
+}
+	.download-app {
+
+		display: table; 
+		margin: 20px auto; 
+		text-align: center;
+		
+	}	
+
+	.registration-composition .img {
+
+		width: 30px;
+		text-align: center;
+		padding: 0px;
+		margin-right: 20px;
+	
+	}	
+	.planning {
+	    margin-top: 0px;
+		
 	}
-	.planning .planning-composition h2 {
-		font-size: 22px;
-		padding: 0
+	.planning-composition {
+		height: 150px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-top: -40px;
 	}
-	.planning .planning-composition p {
-		font-size: 14px;
-		padding: 0 10px
+	.planning-composition h2 {
+		font-size: 25px;
+		text-align: center;
+		margin-bottom: 20px;
+		margin-top: 20px;
 	}
+	.planning-composition p {
+		font-size: 12px;
+		text-align: center;
+		
+	}
+	
+	
 	.meeting {
-		margin-top: 60px
+		margin-top: 50px;
+		margin-bottom: 20px;
 	}
 	.meeting-composition {
-		padding: 0;
-		text-align: center;
-		height: 100px
+		height: 200px;
+		margin-top: 0px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-top: -30px;
 	}
 	.meeting-composition h2 {
-		font-size: 20px;
-		padding: 0 0;
-		margin: 0
+		font-size: 25px;
+		text-align: center;
+		margin-bottom: 20px;
+		margin-top: 20px;
 	}
 	.meeting-composition p {
-		font-size: 14px;
-		padding: 0
+		font-size: 12px;
+		text-align: center;
 	}
+
 	.statistics {
-		margin-top: 60px;
-		margin-bottom: 100px
-	}
-	.statistics-img img {
-		width: 100%;
-		padding-top: 60px
+		margin-top: 0px;
+		margin: 0 auto;
 	}
 	.statistics-composition {
+		height: 300px;
+		margin-top: 0px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: auto auto;
 		text-align: center;
-		padding: 0;
-		height: 220px
+		margin-top: -30px;
 	}
 	.statistics-composition h2 {
-		font-size: 19px
+		font-size: 25px;
+		text-align: center;
+		margin-bottom: 20px;
+		margin-top: 20px;
 	}
+	
 	.statistics-composition p {
-		font-size: 14px
+		font-size: 12px;
+		text-align: center;
 	}
 	.statistics-composition .button {
 		padding: 12px 12px;
-		width: 220px;
-		font-size: 14px;
-		margin-top: 20px
+		width: 80%;
+		font-size: 10px;
+		margin-top: 20px;
+		margin-bottom: 50px;
+		margin-left: 0%;
+		
+		
+
 	}
+	
+	.statistics-img img {
+	width: 110%;
+	padding-top: 0px;
+	margin-left: -20px;
+}
+	
+	.statistics-composition a {
+	    text-align: center;
+	}
+	
 	.video-watch {
-		margin-top: 80px;
-		height: 200px
+		margin-top: 0px;
+		height: 250px
 	}
 	.video-watch h2 {
-		padding-top: 20px;
-		font-size: 25px
-	}
-	.video-play {
-		border-top: 30px solid transparent;
-		border-left: 60px solid #d0d4dc;
-		border-bottom: 30px solid transparent
+		padding-top: 45px;
+		font-size: 20px;
 	}
 	.connect {
 		margin-top: 100px
 	}
 	.connect a {
-		font-size: 26px
+		font-size: 24px
 	}
 	.footer p {
 		font-size: 12px
