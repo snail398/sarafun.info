@@ -385,7 +385,7 @@ body {
 		margin-left: -15px;
 		margin-right: -15px
 	}
-
+	.col-lg-05,
 	.col-lg-1,
 	.col-lg-10,
 	.col-lg-11,
@@ -398,6 +398,7 @@ body {
 	.col-lg-7,
 	.col-lg-8,
 	.col-lg-9,
+	.col-md-05,
 	.col-md-1,
 	.col-md-10,
 	.col-md-11,
@@ -830,6 +831,7 @@ body {
 	}
 
 	@media (min-width:992px) {
+		.col-md-05,
 		.col-md-1,
 		.col-md-10,
 		.col-md-11,
@@ -879,6 +881,9 @@ body {
 		}
 		.col-md-1 {
 			width: 8.33333333%
+		}
+		.col-md-05 {
+			width: 4.16665%
 		}
 		.col-md-pull-12 {
 			right: 100%
@@ -1000,6 +1005,7 @@ body {
 	}
 
 	@media (min-width:1200px) {
+		.col-lg-05,
 		.col-lg-1,
 		.col-lg-10,
 		.col-lg-11,
@@ -1049,6 +1055,9 @@ body {
 		}
 		.col-lg-1 {
 			width: 8.33333333%
+		}
+		.col-lg-05 {
+			width: 4.16665%
 		}
 		.col-lg-pull-12 {
 			right: 100%
@@ -1518,12 +1527,12 @@ body {
 }
 
 .site-header {
-	margin-bottom: 100px;
+	margin-bottom: 0px;
 	
 }
 
 .header-line {
-	margin-bottom: 180px
+	margin-bottom: 120px
 }
 
 .header-menu {
@@ -1540,7 +1549,6 @@ body {
 	width: 100%;
 	padding-left: 12%;
 	border: solid 1px #fc2d6c;
-	border-left:  ;
 	-webkit-border-radius: 0 54px 54px 0;
 	border-radius: 54px 54px 54px 54px;
 	white-space: nowrap;
@@ -1581,9 +1589,7 @@ body {
 }
 
 .header-img img {
-	max-width: 80%;
-	float: right;
-	padding-top: 20px;
+	max-width: 80%
 }
 
 a {
@@ -1595,345 +1601,107 @@ button {
 	outline: 0
 }
 
-.header-composition {
-	
-	margin-top: 0;
-	margin-bottom: 100px;
-	height: 54px
-}
-
-.header-composition p {
-	font-size: 16px;
-	font-weight: 700;
-	color: #fff;
-	
-	margin: 0;
-	display: inline-block;
-	line-height: 1.5;
-}
-
-.header-composition h2 {
-	font-size: 36px;
-	color: #fff;
-	font-weight: 700;
-	margin: 0;
-	padding: 0;
-	float: left;
-	font-weight: 700;
-	margin-bottom: 50px;
-	line-height: 1.5;
-}
-
-.header-composition h1 {
-	font-size: 16px;
-	font-weight: 700;
-	color: #fff;
-	
-	margin: 0;
-	display: inline-block;
-	line-height: 1.5;
-}
-
-.header-composition img {
-	position: absolute;
-	top: 25%;
-	left: -18%;
-	width: 30%
-}
-
-.header-question {
-	text-align: center;
-	margin-bottom: 100px;
-	margin-top: 50px;
-	height: 54px
-}
-
-.header-question h2 {
-	font-size: 34px;
-	color: #fff;
-	font-weight: 500;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	margin: 100
-}
-
-.header-question .button {
-	padding: 14px 14px;
-	width: 280px;
-	font-size: 18px
-}
-
-.friends {
-	margin-top: 100px
-}
-
-.new-client {
+.where-work-answer {
 	text-align: center
 }
 
-.new-client h2 {
+.where-work-answer h1, h2 {
+	display: inline-block;
 	font-size: 40px;
 	color: #fff;
-	font-weight: 500;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	line-height: 1.5;
+	font-weight: 700;
 }
 
-.conditions {
-	margin-bottom: 50px;
-	height: 54px
-}
-
-.conditions p {
-	font-size: 40px;
-	color: #fff;
-	font-weight: 500;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-	margin-top: 20px;
-	
-	text-align: center;
-}
-
-
-
-.registration {
-	margin-top: 0px
-}
-
-.registration-img {
-	background: url(assets/img/plashka.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 12px 5px;
-	text-align: center
-}
-
-.registration-img img {
-	width: 100%;
-	padding: 5%
-}
-
-.registration-composition {
+.circle {
+    width:100%;
 	margin: 0;
-	margin-top: 100px;
-	height: 450px;
-	padding-left: 30px;
-}
-
-.registration-composition h2 {
-	font-size: 35px;
-	color: #fff;
-	font-weight: 500;
-	margin-bottom: 50px;
-	margin-top: 90px;
-}
-
-.registration-composition p {
-	font-size: 23px;
-	color: #fff;
-	font-weight: 500;
-}
-.registration-composition .button {
-	padding: 12px 14px;
-	width: 300px;
-	font-size: 14px;
-	margin-top: 20px;
-	margin-bottom: 50px;
-	margin-left: 15px;
-}
-.registration-composition .button-shop {
 	padding: 0;
-	margin: 0;
-	border-radius:0;
-	
-
+	text-align: center;
+	background: -webkit-gradient(linear, left top, right top, from(#fd9722), to(#fc296e));
+	background: linear-gradient(to right,  #fc296e, #fd9722);
+	    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+.circle:after {
+    content: "";
+    display: block;
+    width: 96%;
+	margin-left: 2%;
+	margin-top: 2%;
+	margin-bottom:2%;
+    height:0;
+    padding-bottom: 96%;
+	background: url(assets/img/bar-fon.jpg);
+	background-size: cover;
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
 }
 
-.registration-composition .img {
-
-	width: 60px;
-	float: left;
-	padding: 10px;
-	margin-right: 20px;
-	
+.circle p {
+	word-wrap: break-word;
 }
 
-.planning {
-	margin-top: 0px
-}
-
-.planning-img {
-	background: url(assets/img/plashka.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 12px 5px;
-	text-align: center
-}
-
-.planning-img img {
-	width: 100%;
-	padding: 0%
-}
-
-.planning-composition {
-	-webkit-box-ordinal-group: 3;
-	-webkit-order: 2;
-	-ms-flex-order: 2;
-	order: 2;
-	margin: 0;
-	height: 450px;
-	text-align: right;
-	padding-right: 30px;
-	margin-top: 80px;
-}
-
-.planning-composition h2 {
-	font-size: 35px;
-	color: #fff;
-	font-weight: 500;
-	margin-bottom: 50px;
-}
-
-.planning-composition p {
-	font-size: 23px;
-	color: #fff;
-	font-weight: 500
-}
-
-.meeting {
-	margin-top: 100px
-}
-
-.meeting-img {
-	background: url(assets/img/plashka.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 12px 0;
-	text-align: center
-}
-
-.meeting-img img {
-	width: 100%;
-	padding-top: 30px
-}
-
-.meeting-composition {
-	margin: 0;
-	height: 400px;
-	padding-left: 30px
-}
-
-.meeting-composition h2 {
-	font-size: 35px;
-	color: #fff;
-	font-weight: 500;
-	margin-bottom: 50px;
-}
-
-.meeting-composition p {
-	font-size: 23px;
-	color: #fff;
-	font-weight: 500
-}
-
-.statistics {
-	margin-top: 100px
-}
-
-.statistics-img {
-	background: url(assets/img/plashka.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 12px 5px;
-	text-align: center
-}
-
-.statistics-img img {
-	width: 110%;
-	padding-top: 0px;
-	margin-left: -50px;
-}
-
-.statistics-composition {
-	margin: 0;
-	margin-top: 50px;
-	height: 450px;
-	text-align: right;
-	padding-right: 30px
-}
-
-.statistics-composition h2 {
+.circle .name-bar {
+	padding: 0 5%;
+    float:left;
 	font-size: 30px;
-	color: #fff;
-	font-weight: 500;
-	line-height: 1.5;
-	margin-bottom: 10px;
+    width:100%;
+    padding-top:25%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+	word-wrap: break-word;
 }
 
-.statistics-composition p {
-	font-size: 17px;
-	color: #fff;
-	font-weight: 500
+.circle .gorod-bar {
+    float:left;
+    width:100%;
+	padding-top:30%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+	word-wrap: break-word;
 }
 
-.statistics-composition .button {
-	padding: 12px 14px;
-	width: 300px;
-	font-size: 14px;
-	margin-top: 20px;
-	margin-bottom: 50px;
-	margin-left: 15px;
+.circle .gorod-bar-bg {
+    float:left;
+    width:100%;
+	padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+	word-wrap: break-word;
 }
 
-.video-watch {
+.circle .adres-bar {
+    float:left;
+    width:100%;
+    padding-top:2%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+	overflow-x:hidden;
+}
+.line {
+	margin-left: auto;
+	margin-right: auto;	
+	margin-top: 50px;
+}
+
+.line-1 {
 	height: 400px;
-	background: -webkit-gradient(linear, left top, right top, from(#fd2473), to(#8537d7));
-	background: linear-gradient(to right, #fd2473, #8537d7);
-	-webkit-border-radius: 20px;
-	border-radius: 20px;
-	width: 100%;
-	text-align: center
-}
-.video {
-	margin-top: 100px;
-}
-.video-watch h2 {
-	font-size: 34px;
-	color: #fff;
-	font-weight: lighter;
-	font-style: italic;
-	padding-top: 100px;
-	margin-bottom: 30px;
 }
 
-.video-play {
-	background-color: linear-gradient(to right, #fd9722, #fc296e);
-	width: 0;
-	height: 0;
-	border-top: 50px solid transparent;
-	border-left: 100px solid #d0d4dc;
-	border-bottom: 50px solid transparent
-}
 
-.connect {
-	margin-top: 100px;
-	text-align: center
-}
 
-.connect a {
-	font-size: 40px;
-	color: #fff;
-	font-weight: 500;
-	text-decoration: underline
-}
+
+
 
 .footer {
 	margin-top: 100px;
@@ -2048,21 +1816,26 @@ button {
 }
 
 .flex {
-	height: 100%;
+	height: 100%;	
+	display: flex;
+	flex-flow: row nowrap;
+	flex-direction: column;
+    justify-content: center;
+	align-items: center;
 	display: -webkit-flex;
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-webkit-flex-flow: row nowrap;
 	-ms-flex-flow: row nowrap;
-	flex-flow: row nowrap;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	-ms-flex-align: center;
-	align-items: center
+	
 }
+
+
 
 .flex-video {
 	display: -webkit-flex;
@@ -2081,146 +1854,7 @@ button {
 
 @media only screen and (min-width:1201px) {
 	
-	.header-download {
-		text-align: right;
-		height: 54px;
-		margin-top: 30px;
-		margin-bottom: 50px;
-		margin-left: 20;
-		margin-right: 20px;
-		
-		
-	}
 	
-
-	
-	.header-download .button {
-		padding: 10px 10px;
-		width: 170px;
-		font-size: 14px;
-		margin-left: 50px;
-		
-	}
-	
-		.header-download  .brder {
-		padding: 10px 10px;
-		width: 170px;
-		font-size: 14px;
-		border: solid 1px #fc2d6c;
-		background: rgba(0, 170, 238, 0);
-	-webkit-border-radius: 0 54px 54px 0;
-	border-radius: 54px 54px 54px 54px;
-	}
-	
-	.header-composition  {
-		margin-top: 50px;
-	}
-	
-	.header-composition h2 {
-		font-size: 30px;
-		float: left;
-	}
-	
-	.header-composition h1 {
-		font-size: 18px;
-		float: left;
-	}
-	
-	.header-composition p {
-		font-size: 18px;
-		float: left;
-	}
-	
-
-	
-	.header-composition img {
-		top: -25%
-	}
-	.header-question {
-		margin-bottom: 100px;
-		margin-top: 50px
-	}
-	.header-question h2 {
-		padding-bottom: 20px;
-		font-size: 30px
-	}
-	.header-question .button {
-		padding: 12px 12px;
-		width: 250px;
-		font-size: 14px
-	}
-	.new-client {
-		margin-top: 100px
-	}
-	.new-client h2 {
-		font-size: 38px
-	}
-	.new-client .conditions p {
-		font-size: 30px;
-		padding-top: 6px
-	}
-
-	.registration-composition {
-		height: 350px;
-		margin-top: 100px;
-	}
-	.registration-composition h2 {
-		font-size: 30px;
-		margin-bottom: 20px;
-	}
-	.registration-composition .bottom {
-		margin-bottom: 10px;
-	}
-	.registration-composition p {
-		font-size: 18px
-	}
-	.planning-composition {
-		height: 430px
-	}
-	.planning-composition h2 {
-		font-size: 30px
-	}
-	.planning-composition p {
-		font-size: 18px
-	}
-	.meeting-composition {
-		height: 300px
-	}
-	.meeting-composition h2 {
-		font-size: 30px
-	}
-	.meeting-composition p {
-		font-size: 18px
-	}
-	.statistics-composition {
-		height: 400px
-	}
-	.statistics-composition h2 {
-		font-size: 30px
-	}
-	.statistics-composition p {
-		font-size: 20px;
-		padding-left: 50px
-	}
-	.statistics-composition .button {
-		padding: 12px 12px;
-		width: 300px;
-		font-size: 14px;
-		margin-right: 15px;
-	}
-	.video-watch {
-		margin-top: 80px;
-		height: 350px
-	}
-	.video-watch h2 {
-		padding-top: 75px
-	}
-	.connect {
-		margin-top: 100px
-	}
-	.connect a {
-		font-size: 34px
-	}
 	.footer p {
 		font-size: 20px
 	}
@@ -2236,148 +1870,67 @@ button {
 	}
 	.header-download .button {
 		padding: 10px 10px;
-		width: 130px;
-		font-size: 10px;
-		margin-left: 1px;
-		
+		width: 200px;
+		font-size: 16px
 	}
 	
-	.header-download  .brder {
-		padding: 10px 10px;
-		width: 130px;
-		font-size: 10px;
-		border: solid 1px #fc2d6c;
-		background: rgba(0, 170, 238, 0);
-		-webkit-border-radius: 0 54px 54px 0;
-		border-radius: 54px 54px 54px 54px;
-	}
+	.circle .name-bar {
+		padding: 0 5%;
+		float:left;
+		font-size: 25px;
+		width:100%;
+		padding-top:25%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+}
 	
-	.header-composition  {
-		margin-top: 20px;
-	}
-	
-	.header-composition h2 {
-		font-size: 30px;
-		float: left;
-	}
-	
-	.header-composition h1 {
-		font-size: 18px;
-		float: left;
-	}
-	
-	.header-composition p {
-		font-size: 18px;
-		float: left;
-	}
-	
+	.circle .gorod-bar {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:30%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+}
 
-	
-	.header-composition img {
-		top: -25%
-	}
-	.header-question {
-		margin-bottom: 100px;
-		margin-top: 50px
-	}
-	.header-question h2 {
-		padding-bottom: 20px;
-		font-size: 30px
-	}
-	.header-question .button {
-		padding: 12px 12px;
-		width: 250px;
-		font-size: 14px
-	}
-	.new-client {
-		margin-top: 100px
-	}
-	.new-client h2 {
-		font-size: 38px
-	}
-	.new-client .conditions p {
-		font-size: 30px;
-		padding-top: 6px
+	.circle .gorod-bar-bg {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:50%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
 	}
 
-	.registration-composition {
-		height: 350px;
-		margin-top: 30px;
-	}
-	.registration-composition h2 {
-		font-size: 30px;
-		margin-bottom: 20px;
-	}
-	.registration-composition .bottom {
-		margin-bottom: 10px;
-	}
-	.registration-composition p {
-		font-size: 18px
-	}
-	.planning-composition {
-		height: 430px;
-		margin-top: 30px;
-	}
-	.planning-composition h2 {
-		font-size: 30px
-	}
-	.planning-composition p {
-		font-size: 18px
-	}
-	.meeting-composition {
-		height: 300px;
-		margin-top: 0px;
-	}
-	.meeting-composition h2 {
-		font-size: 30px;
-		margin-top: 0px;
-		margin-bottom: 20px;
-	}
-	.meeting-composition p {
-		font-size: 14px
+	.circle .adres-bar {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:2%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		overflow-x:hidden;
 	}
 
-
-	.statistics-composition {
-		height: 400px;
-		margin-top: 0px;
-	}
-	.statistics-composition h2 {
-		font-size: 25px
-	}
-	
-	.statistics-composition p {
-		font-size: 14px;
-		padding-left: 50px
-	}
-	.statistics-composition .button {
-		padding: 12px 12px;
-		width: 300px;
-		font-size: 14px;
-		margin-right: 15px;
-	}
-	.video-watch {
-		margin-top: 80px;
-		height: 350px
-	}
-	.video-watch h2 {
-		padding-top: 75px
-	}
-	.connect {
-		margin-top: 100px
-	}
-	.connect a {
-		font-size: 34px
-	}
 	.footer p {
 		font-size: 20px
 	}
 }
 
 @media only screen and (min-width:768px) and (max-width:992px) {
-	
 	.site-header {
-		margin-bottom: 100px
+		margin-bottom: 0px
 	}
 		.header-menu {
 		text-align: center;
@@ -2407,141 +1960,75 @@ button {
 	.header-menu ul li a {
 	margin: 0 25px}
 	
-	.header-download {
-		text-align: right;
-		height: 54px;
-		margin-top: 30px;
-		margin-bottom: 50px;
-		margin-right: 50px
-	}
-
+	.circle .name-bar {
+		padding: 0 5%;
+		float:left;
+		font-size: 30px;
+		width:100%;
+		padding-top:25%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+}
 	
-	.header-composition  {
-		margin-top: 20px;
-	}
-	
-	.header-composition h2 {
-		font-size: 25px;
-		float: left;
-		margin-bottom: 20px;
-	}
-	
-	.header-composition h1 {
-		font-size: 14px;
-		float: left;
-	}
-	
-	.header-composition p {
-		font-size: 14px;
-		float: left;
-	}
-	
-
-	
-	.header-composition img {
-		top: -25%
-	}
-
-	.new-client {
-		margin-top: 50px
-	}
-	.new-client h2 {
-		font-size: 25px
-	}
-	.new-client .conditions p {
-		font-size: 25px;
-		padding-top: 6px
-	}
-
-	.registration-composition {
-		height: 350px;
-		margin-top: 0px;
-	}
-	.registration-composition h2 {
-		font-size: 25px;
-		margin-bottom: 20px;
-	}
-	.registration-composition .bottom {
-		margin-bottom: 10px;
-	}
-	.registration-composition p {
-		font-size: 14px
-	}
-	.planning {
-	    margin-top: 50px;
-	}
-	.planning-composition {
-		height: 430px;
-		margin-top: -20px;
-	}
-	.planning-composition h2 {
-		font-size: 25px
-	}
-	.planning-composition p {
-		font-size: 14px
-	}
-	
-	
-	.meeting {
-		margin-top: 50px;
-	}
-	.meeting-composition {
-		height: 200px;
-		margin-top: 0px;
-	}
-	.meeting-composition h2 {
-		font-size: 25px;
-		margin-top: 0px;
-		margin-bottom: 20px;
-	}
-	.meeting-composition p {
-		font-size: 14px
-	}
-
-
-	.statistics-composition {
-		height: 300px;
-		margin-top: 0px;
-	}
-	.statistics-composition h2 {
-		font-size: 20px
-	}
-	
-	.statistics-composition p {
-		font-size: 12px;
-		padding-left: 50px
-	}
-	.statistics-composition .button {
-		padding: 12px 12px;
-		width: 250px;
-		font-size: 12px;
-		margin-right: 15px;
-	}
-	.video-watch {
-		margin-top: 80px;
-		height: 350px
-	}
-	.video-watch h2 {
-		padding-top: 75px
-	}
-	.connect {
-		margin-top: 100px
-	}
-	.connect a {
-		font-size: 34px
-	}
-	.footer p {
-		font-size: 20px
-	}
+	.circle .gorod-bar {
+		font-size: 20px;
+		float:left;
+		width:100%;
+		padding-top:50%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
 }
 
-@media only screen and (min-width:481px) and (max-width:767px) {
-	.site-header {
-		margin-bottom: 100px
+	.circle .gorod-bar-bg {
+		font-size: 20px;
+		float:left;
+		width:100%;
+		padding-top:50%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
 	}
-		.header-menu {
+
+	.circle .adres-bar {
+		font-size: 15px;
+		float:left;
+		width:100%;
+		padding-top:2%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		overflow-x:hidden;
+	}
+
+	.line-1 {
+	height: 400px;
+}
+
+	
+	.footer p {
+		font-size: 14px
+	}
+
+}
+@media only screen and (min-width:481px) and (max-width:767px) {
+	.header-line {
+		margin-bottom: 120px
+	}
+	.site-header {
+		margin-bottom: 0
+	}
+	.header-menu {
 		text-align: center;
-		font-size: 16px;
+		font-size: 18px;
 		margin-top: 20px;
 		margin-bottom: 0;
 		height: 54px
@@ -2565,210 +2052,70 @@ button {
 		display: inline-block
 	}
 	.header-menu ul li a {
-	margin: 0 25px}
-	
-	.header-download {
-		text-align: right;
-		height: 54px;
-		margin-top: 30px;
-		margin-bottom: 50px;
-		margin-right: 50px
-	}
-	.header-download .button {
-		padding: 10px 10px;
-		width: 200px;
-		font-size: 16px
-	}
-	.header-composition  {
-		margin-top: 20px;
-		text-align: center;
+		margin: 0 20px
 	}
 	
-	.header-composition h2 {
-		font-size: 25px;
+	.circle .name-bar {
+		padding: 0 5%;
+		float:left;
+		font-size: 30px;
+		width:100%;
+		padding-top:30%;
+		line-height:1em;
+		margin-top:-0.5em;
 		text-align:center;
-		margin-bottom: 20px;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+		color:white;
+		word-wrap: break-word;
+}
 	
-	.header-composition h1 {
-		font-size: 18px;
-		text-align: center;
-		float: center;
-		
-	}
-	
-	.header-composition p {
-		font-size: 18px;
-		text-align: center;
-		float: center;
-	}
-	
-
-	
-	.header-img {
-		margin-left: 15%;
-		width: 60%;
-		margin-top: -50px;
-		
-	}
-
-	.new-client {
-		margin-top: 50px
-	}
-	.new-client h2 {
-		font-size: 30px
-	}
-	.new-client .conditions p {
-		font-size: 25px;
-		padding-top: 6px
-	}
-
-	.registration-composition {
-		height: 350px;
-		margin-top: 0px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.registration-composition h2 {
-		font-size: 25px;
-		margin-bottom: 20px;
-		text-align: center;
-	}
-	.registration-composition .button {
-		padding: 12px 12px;
-		width: 80%;
+	.circle .gorod-bar {
 		font-size: 20px;
-		margin-top: 20px;
-		margin-bottom: 50px;
-		margin-left: 10%;
-	}
-	
-	.registration-composition p {
-		font-size: 20px;
-		text-align: center;
-	}
-	.registration-composition .button-shop {
-		padding: 0;
-		margin: 0;
-		border-radius:0;
-		
-		
-	
+		float:left;
+		width:100%;
+		padding-top:40%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+}
 
-	}
-	.download-app {
-
-		display: table; 
-		margin: 20px auto; 
-		text-align: center;
-		
-	
-	}	
-	.registration-composition .img {
-
-		width: 60px;
-		text-align: center;
-		padding: 0px;
-		margin-right: 20px;
-	
-	}	
-	.planning {
-	    margin-top: 0px;
-	}
-	.planning-composition {
-		height: 300px;
-		margin-top: -20px;
-	}
-	.planning-composition h2 {
-		font-size: 35px;
-		text-align: center;
-	}
-	.planning-composition p {
+	.circle .gorod-bar-bg {
 		font-size: 20px;
-		text-align: center;
-	}
-	
-	
-	.meeting {
-		margin-top: 50px;
-	}
-	.meeting-composition {
-		height: 300px;
-		margin-top: 0px;
-	}
-	.meeting-composition h2 {
-		font-size: 35px;
-		margin-top: 0px;
-		margin-bottom: 20px;
-		text-align: center;
-	}
-	.meeting-composition p {
-		font-size: 20px;
-		text-align: center;
+		float:left;
+		width:100%;
+		padding-top:40%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
 	}
 
-	.statistics {
-		margin-top: 0px;
-	}
-	.statistics-composition {
-		height: 400px;
-		margin-top: 0px;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-	}
-	.statistics-composition h2 {
-		font-size: 35px;
-		text-align: center;
-				margin-left: auto;
-		margin-right: auto;
+	.circle .adres-bar {
+		font-size: 20px;
+		float:left;
+		width:100%;
+		padding-top:2%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		overflow-x:hidden;
 	}
 	
-	.statistics-composition p {
-		font-size: 20px;
-		padding-left: 0px;
-		text-align: center;
-				margin-left: auto;
-		margin-right: auto;
-	}
-	.statistics-composition .button {
-				margin-left: auto;
-		margin-right: auto;
-width: 80%;
-		font-size: 20px;
+	.line-1 {
+	height: 500px;
 	}
 
-	
-	
-	.statistics-composition a {
-	    text-align: center;
-				margin-left: auto;
-		margin-right: auto;
-	}
-	
-	.video-watch {
-		margin-top: 80px;
-		height: 350px
-	}
-	.video-watch h2 {
-		padding-top: 75px
-	}
-	.connect {
-		margin-top: 100px
-	}
-	.connect a {
-		font-size: 34px
-	}
 	.footer p {
-		font-size: 20px
+		font-size: 14px
 	}
 }
 
 @media only screen and (max-width:480px) {
 	.header-line {
-		margin-bottom: 120px
+		margin-bottom: 100px
 	}
 	.site-header {
 		margin-bottom: 0
@@ -2801,237 +2148,104 @@ width: 80%;
 	.header-menu ul li a {
 		margin: 0 10px
 	}
-	.header-img {
-		text-align: center
-	}
-	.header-img img {
-		max-width: 80%
-	}
-	.header-composition  {
-		margin-top: 20px;
-		text-align: center;
-
-	}
 	
-	.header-composition h2 {
-		font-size: 20px;
-		text-align:center;
-		margin-bottom: 20px;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	
-	.header-composition h1 {
-		font-size: 12px;
-		text-align: center;
-		float: center;
-		
-	}
-	
-	.header-composition p {
-		font-size: 12px;
-		text-align: center;
-		float: center;
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-	
-
-	
-	.header-img {
-		margin-left: 15%;
-		width: 60%;
-		margin-top: -20px;
-		
-	}
-
-	.new-client {
-		margin-top: 50px
-	}
-	.new-client h2 {
-		font-size: 20px
-	}
-	.new-client .conditions p {
-		font-size: 15px;
-		padding-top: 6px
-	}
-	
-	
-	
-.conditions {
-	margin-bottom: 0px;
-	}
-	.registration {
-		height: 200px;
-	}
-	.registration-img {
-		background: url(assets/img/plashka.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: 12px 5px;
-		text-align: center;
-		margin-top: -50px;
-		margin-bottom: -50px;
-		
-		
-	}
-	
-	.registration-composition {
-		height: 350px;
-		margin-top: 0px;
-		text-align: center;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	.registration-composition h2 {
+	.where-work-answer h1, h2 {
+		display: inline-block;
 		font-size: 25px;
-		margin-bottom: 20px;
-		text-align: center;
-		margin-top: 0px;
-	}
-	.registration-composition .bottom {
-		margin-bottom: 10px;
-	}
-	.registration-composition p {
-		font-size: 15px;
-		text-align: center;
-	}
-	.registration-composition .button {
-		padding: 12px 12px;
-		width: 80%;
-		font-size: 10px;
-		margin-top: 20px;
-		margin-bottom: 50px;
-		margin-left: 10%;
-	}
-	.registration-composition .button-shop {
-		padding: 0;
-		margin: 0;
-		border-radius:0;
-	
-
+		color: #fff;
+		font-weight: 500;
 }
-	.download-app {
-
-		display: table; 
-		margin: 20px auto; 
-		text-align: center;
-		
-	}	
-
-	.registration-composition .img {
-
-		width: 30px;
-		text-align: center;
-		padding: 0px;
-		margin-right: 20px;
-	
-	}	
-	.planning {
-	    margin-top: 0px;
-		
-	}
-	.planning-composition {
-		height: 150px;
-		padding-left: 10px;
-		padding-right: 10px;
-		margin-top: -40px;
-	}
-	.planning-composition h2 {
-		font-size: 25px;
-		text-align: center;
-		margin-bottom: 20px;
-		margin-top: 20px;
-	}
-	.planning-composition p {
-		font-size: 12px;
-		text-align: center;
-		
+	.line {
+		margin-top: 0px;;
 	}
 	
-	
-	.meeting {
-		margin-top: 50px;
-		margin-bottom: 20px;
-	}
-	.meeting-composition {
-		height: 200px;
-		margin-top: 0px;
-		padding-left: 10px;
-		padding-right: 10px;
-		margin-top: -30px;
-	}
-	.meeting-composition h2 {
-		font-size: 25px;
-		text-align: center;
-		margin-bottom: 20px;
-		margin-top: 20px;
-	}
-	.meeting-composition p {
-		font-size: 12px;
-		text-align: center;
-	}
-
-	.statistics {
-		margin-top: 0px;
-		margin: 0 auto;
-	}
-	.statistics-composition {
+	.line-1 {
 		height: 300px;
-		margin-top: 0px;
-		padding-left: 10px;
-		padding-right: 10px;
-		margin: auto auto;
-		text-align: center;
-		margin-top: -30px;
-	}
-	.statistics-composition h2 {
-		font-size: 25px;
-		text-align: center;
-		margin-bottom: 20px;
-		margin-top: 20px;
 	}
 	
-	.statistics-composition p {
-		font-size: 12px;
+	.circle {
+		width:100%;
+		margin: 0;
+		padding: 0;
 		text-align: center;
+		background: -webkit-gradient(linear, left top, right top, from(#fd9722), to(#fc296e));
+		background: linear-gradient(to right,  #fc296e, #fd9722);
+			-moz-border-radius: 50%; 
+		-webkit-border-radius: 50%; 
+		border-radius: 50%;
 	}
-	.statistics-composition .button {
-		padding: 12px 12px;
-		width: 80%;
-		font-size: 10px;
-		margin-top: 20px;
-		margin-bottom: 50px;
-		margin-left: 0%;
-		
-		
+	.circle:after {
+		content: "";
+		display: block;
+		width: 96%;
+		margin-left: 2%;
+		margin-top: 2%;
+		margin-bottom:2%;
+		height:0;
+		padding-bottom: 96%;
+		background: url(assets/img/bar-fon.jpg);
+		background-size: cover;
+		-moz-border-radius: 50%; 
+		-webkit-border-radius: 50%; 
+		border-radius: 50%;
+	}
 
+	.circle p {
+		word-wrap: break-word;
+	}
+
+	.circle .name-bar {
+		padding: 0 5%;
+		float:left;
+		font-size: 30px;
+		width:100%;
+		padding-top:25%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+	}
+
+	.circle .gorod-bar {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:20%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+	}
+
+	.circle .gorod-bar-bg {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:20%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+	}
+
+	.circle .adres-bar {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:2%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		overflow-x:hidden;
 	}
 	
-	.statistics-img img {
-	width: 110%;
-	padding-top: 0px;
-	margin-left: -20px;
-}
+
 	
-	.statistics-composition a {
-	    text-align: center;
-	}
 	
-	.video-watch {
-		margin-top: 0px;
-		height: 250px
-	}
-	.video-watch h2 {
-		padding-top: 45px;
-		font-size: 20px;
-	}
-	.connect {
-		margin-top: 100px
-	}
-	.connect a {
-		font-size: 24px
-	}
 	.footer p {
 		font-size: 12px
 	}
