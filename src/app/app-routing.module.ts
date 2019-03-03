@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './component/app.component';
 import { LandingComponent } from './component/landing.component';
+import { LandinggComponent } from './component/landingg.component';
+import { LandingggComponent } from './component/landinggg.component';
 import { ActionsComponent } from './component/actions.component';
 import { AdminkaComponent } from './component/adminka.component';
 import { CreateActionComponent } from './component/create.action.component';
@@ -50,6 +52,8 @@ const adminRoutes: Routes = [
 const routes: Routes = [
 
     { path: '', component: LandingComponent},
+    { path: 'page2', component: LandinggComponent},
+    { path: 'page3', component: LandingggComponent},
     { path: 'admin', component: AdminkaComponent, children: adminRoutes},
     { path: 'referal', component: ReferalComponent}
 ];

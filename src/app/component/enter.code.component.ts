@@ -20,12 +20,8 @@ export class EnterCodeComponent implements OnInit{
     private modalComp: ModalComponent;
     action:number=0;
 	account:number=0;
-    referalNum:number=0;
-	
-	noll:number=0;
-    referal:string="";
 	sarCode:string="";
-	public mask = [/[C,S,R]/, /[0-9]/, /\d/, /\d/, /\d/, /\d/, /\d/,  /\d/, /\d/, /\d/, /\d/, /\d/];
+	public mask = [/[C,S]/, /[0-9]/, /\d/, /\d/, /\d/, /\d/, /\d/,  /\d/, /\d/, /\d/];
 	 public loading = false;
 	 message:string="";
 	 header:string="";
@@ -58,33 +54,6 @@ export class EnterCodeComponent implements OnInit{
 	getLinkAndBonus(){
 	this.httpService.getForSimpleData('/getlinkandbonus',
 	new HttpParams().set('userid',this.account.toString()).set('actionid',this.action.toString()).set('staffid',this.accountModel.getAccount().id.toString()))
-	.subscribe(
-		data=>
-		{
-			this.response = data.toString();
-			this.header = "Выдайте бонус и не забудьте отправить сообщение аффилиату";
-			var re =/\|/gi;
-			var se = /iPhone/gi;
-			if ((window.navigator.userAgent).search(se) !=-1)
-			{
-				this.myHtml = this.sanitizer.bypassSecurityTrustHtml("<p>Выдайте бонус рефералу! Его подарок - "+this.response.substr(this.response.search(re)+1)+"</p></br><p>Аффилиат завершил акцию! Кликните на ссылку, для отправки сообщения с ссылкой на сарафанку</p></br>"+"<a href=\"sms:+"+this.response.substr(0,11)+"&body="+this.response.substr(11,this.response.search(re)-11)+"\">"+this.response.substr(11,this.response.search(re)-11)+"</a>");
- 
-			}
-			else
-			{
-			this.myHtml = this.sanitizer.bypassSecurityTrustHtml("<p>Выдайте бонус рефералу! Его подарок - "+this.response.substr(this.response.search(re)+1)+"</p></br><p>Аффилиат завершил акцию! Кликните на ссылку, для отправки сообщения с ссылкой на сарафанку</p></br>"+"<a href=\"sms:+"+this.response.substr(0,11)+"?body="+this.response.substr(11,this.response.search(re)-11)+"\">"+this.response.substr(11,this.response.search(re)-11)+"</a>");
-			}
-			this.loading = false;
-			this.show();
-		}
-	);
-	}
-	
-	getLinkAndBonusForReferal(){
-		
-			this.referalNum= +this.sarCode.substr(1);
-	this.httpService.getForSimpleData('/getlinkandbonus',
-	new HttpParams().set('userid',this.noll.toString()).set('actionid',this.referalNum.toString()).set('staffid',this.accountModel.getAccount().id.toString()))
 	.subscribe(
 		data=>
 		{
@@ -179,59 +148,6 @@ export class EnterCodeComponent implements OnInit{
 														}
 														});
 													//Сообщение о выдаче бонуса аффилиату
-				break;
-				}
-				case "R":{
-				this.referal = this.sarCode.substr(1);
-				this.httpService.getForSimpleData('/referals/checkRef',
-													new HttpParams().set('ref',this.sarCode.substr(1)).set('staffid',this.accountModel.getAccount().id.toString()))
-													.subscribe(data=>{
-														this.response1 =data.toString();
-														switch (this.response1){
-															case "error":{
-																this.header = "Ошибка";
-																this.myHtml = "<p>Ошибка отправки смс</p>";
-																this.loading = false;
-																this.show();
-																break;
-															}
-															
-															case "noexist":{
-																this.header = "Неверный код";
-																this.myHtml = "<p>Такого кода нет</p>";
-																this.loading = false;
-																this.show();
-																break;
-															}
-															case "none":{
-																this.header = "Неверный код";
-																this.myHtml = "<p>Такого кода реферала не существует</p>";
-																this.loading = false;
-																this.show();
-																break;
-															}
-															case "bonusReceived":{
-																this.header = "Бонус уже получен";
-																this.myHtml = "<p>Бонус уже получен</p>";
-																this.loading = false;
-																this.show();
-																break;
-															}
-															case "finish":{
-																//Запрос на получение ссылки для аффилиата и бонуса для реферала
-																this.getLinkAndBonusForReferal();
-																break;
-															}
-															default:{
-																this.header = "Выдайте бонус";
-																this.myHtml = "<p>Выдайте бонус рефералу! Его подарок - "+data+"</p>";
-																this.loading = false;
-																this.show();
-																break;
-															}
-														}
-													});
-													//Сообщение о выдаче бонуса рефералу 
 				break;
 				}
 			}

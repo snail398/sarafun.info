@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { AccountModel } from '../account.model';
-import {Router} from '@angular/router';
-import { HttpService} from '../service/http.service';
-import {HttpClient, HttpParams, HttpHeaders} from '@angular/common/http';
 
 @Component({
   selector: 'app-adminka',
@@ -90,8 +87,7 @@ import {HttpClient, HttpParams, HttpHeaders} from '@angular/common/http';
 })
 
 export class AdminkaComponent {
-	 constructor(private accountModel:AccountModel,
-			 private router: Router,private httpService: HttpService,){
+	 constructor(private accountModel:AccountModel){
 		
 	 }
 	 
@@ -101,11 +97,4 @@ export class AdminkaComponent {
 	this.visibility = vis;
 	console.log(this.visibility );
 	}
-	
-	logout(){
-				this.httpService.getForSimpleData('/logout',new HttpParams()).subscribe(data=>{
-				this.router.navigate(['/admin/login']);
-				});
-				
-			  }
 }

@@ -14,11 +14,14 @@ background:url(assets/img/plashka.png);
 background-size:70%;
 background-repeat:no-repeat;
 background-position:-80px -80px;
- background-color:#1D0937;
+ background-color:#1F0B37;
   color: #ffffff;
 }
 .invisible{display:none;}
 
+ .cont {
+  margin-top: 50px;
+}
 a {
 color: #ffffff;
 cursor: pointer;
