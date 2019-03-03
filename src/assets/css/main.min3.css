@@ -1610,7 +1610,7 @@ button {
 	display: inline-block;
 	font-size: 40px;
 	color: #fff;
-	font-weight: 500;
+	font-weight: 700;
 }
 
 .circle {
@@ -1697,8 +1697,6 @@ button {
 
 .line-1 {
 	height: 400px;
-
-	
 }
 
 
@@ -1825,8 +1823,6 @@ button {
 	flex-direction: column;
     justify-content: center;
 	align-items: center;
-	
-	
 	display: -webkit-flex;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1879,6 +1875,54 @@ button {
 		font-size: 16px
 	}
 	
+	.circle .name-bar {
+		padding: 0 5%;
+		float:left;
+		font-size: 25px;
+		width:100%;
+		padding-top:25%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+}
+	
+	.circle .gorod-bar {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:30%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+}
+
+	.circle .gorod-bar-bg {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:50%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+	}
+
+	.circle .adres-bar {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:2%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		overflow-x:hidden;
+	}
 
 	.footer p {
 		font-size: 20px
@@ -1917,22 +1961,65 @@ button {
 	.header-menu ul li a {
 	margin: 0 25px}
 	
-	.circle .gorod-bar {
-    float:left;
-    width:100%;
-	padding-top:50%;
-    line-height:1em;
-    margin-top:-0.5em;
-    text-align:center;
-    color:white;
-	word-wrap: break-word;
+	.circle .name-bar {
+		padding: 0 5%;
+		float:left;
+		font-size: 30px;
+		width:100%;
+		padding-top:25%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+}
 	
+	.circle .gorod-bar {
+		font-size: 20px;
+		float:left;
+		width:100%;
+		padding-top:50%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+}
 
+	.circle .gorod-bar-bg {
+		font-size: 20px;
+		float:left;
+		width:100%;
+		padding-top:50%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+	}
+
+	.circle .adres-bar {
+		font-size: 15px;
+		float:left;
+		width:100%;
+		padding-top:2%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		overflow-x:hidden;
+	}
+
+	.line-1 {
+	height: 400px;
+}
+
+	
 	.footer p {
 		font-size: 14px
 	}
-}
 
+}
 @media only screen and (min-width:481px) and (max-width:767px) {
 	.header-line {
 		margin-bottom: 120px
@@ -1969,6 +2056,59 @@ button {
 		margin: 0 20px
 	}
 	
+	.circle .name-bar {
+		padding: 0 5%;
+		float:left;
+		font-size: 30px;
+		width:100%;
+		padding-top:30%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+}
+	
+	.circle .gorod-bar {
+		font-size: 20px;
+		float:left;
+		width:100%;
+		padding-top:40%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+}
+
+	.circle .gorod-bar-bg {
+		font-size: 20px;
+		float:left;
+		width:100%;
+		padding-top:40%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+	}
+
+	.circle .adres-bar {
+		font-size: 20px;
+		float:left;
+		width:100%;
+		padding-top:2%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		overflow-x:hidden;
+	}
+	
+	.line-1 {
+	height: 500px;
+	}
+
 	.footer p {
 		font-size: 14px
 	}
@@ -1976,7 +2116,7 @@ button {
 
 @media only screen and (max-width:480px) {
 	.header-line {
-		margin-bottom: 120px
+		margin-bottom: 100px
 	}
 	.site-header {
 		margin-bottom: 0
@@ -2009,6 +2149,103 @@ button {
 	.header-menu ul li a {
 		margin: 0 10px
 	}
+	
+	.where-work-answer h1, h2 {
+		display: inline-block;
+		font-size: 25px;
+		color: #fff;
+		font-weight: 500;
+}
+	.line {
+		margin-top: 0px;;
+	}
+	
+	.line-1 {
+		height: 300px;
+	}
+	
+	.circle {
+		width:100%;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		background: -webkit-gradient(linear, left top, right top, from(#fd9722), to(#fc296e));
+		background: linear-gradient(to right,  #fc296e, #fd9722);
+			-moz-border-radius: 50%; 
+		-webkit-border-radius: 50%; 
+		border-radius: 50%;
+	}
+	.circle:after {
+		content: "";
+		display: block;
+		width: 96%;
+		margin-left: 2%;
+		margin-top: 2%;
+		margin-bottom:2%;
+		height:0;
+		padding-bottom: 96%;
+		background: url(assets/img/bar-fon.jpg);
+		background-size: cover;
+		-moz-border-radius: 50%; 
+		-webkit-border-radius: 50%; 
+		border-radius: 50%;
+	}
+
+	.circle p {
+		word-wrap: break-word;
+	}
+
+	.circle .name-bar {
+		padding: 0 5%;
+		float:left;
+		font-size: 30px;
+		width:100%;
+		padding-top:25%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+	}
+
+	.circle .gorod-bar {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:20%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+	}
+
+	.circle .gorod-bar-bg {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:20%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		word-wrap: break-word;
+	}
+
+	.circle .adres-bar {
+		font-size: 12px;
+		float:left;
+		width:100%;
+		padding-top:2%;
+		line-height:1em;
+		margin-top:-0.5em;
+		text-align:center;
+		color:white;
+		overflow-x:hidden;
+	}
+	
+
+	
 	
 	.footer p {
 		font-size: 12px
