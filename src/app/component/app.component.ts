@@ -20,10 +20,5 @@ export class AppComponent implements OnInit {
 			  ngOnInit(){
 				
 			  }
-			  logout(){
-				this.httpService.getForSimpleData('/logout',new HttpParams()).subscribe(data=>{
-				this.router.navigate(['/admin/login']);
-				});
-				
-			  }
+			
 }
